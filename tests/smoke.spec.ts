@@ -76,7 +76,26 @@ for (const width of [320, 375, 1440]) {
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
     await page.getByRole('button', { name: 'About Me', exact: true }).click();
     await expect(impact).toBeHidden();
-    await expect(page.locator('pre').filter({ hasText: 'Muhammad Faizan Rauf' }).first()).toBeVisible();
+    const profile = page.locator('pre').filter({ hasText: 'Muhammad Faizan Rauf' }).first();
+    await expect(profile).toBeVisible();
+    // Each tab should end at its content plus padding, without a fixed-height gap.
+    const expectContentFits = async (content: typeof profile) => {
+      await expect(async () => {
+        const geometry = await content.evaluate(el => {
+          const body = el.parentElement!.parentElement!;
+          return {
+            gap: body.getBoundingClientRect().bottom - el.getBoundingClientRect().bottom,
+            padding: parseFloat(getComputedStyle(body).paddingBottom),
+          };
+        });
+        expect(Math.abs(geometry.gap - geometry.padding)).toBeLessThan(2);
+      }).toPass({ timeout: 5000 });
+    };
+    await expectContentFits(profile);
+    await page.getByRole('button', { name: 'Tech Stack', exact: true }).click();
+    const lastCategory = page.getByText(portfolioData.skills.at(-1)!.category, { exact: true }).locator('..');
+    await expect(lastCategory).toBeVisible();
+    await expectContentFits(lastCategory);
   });
 }
 

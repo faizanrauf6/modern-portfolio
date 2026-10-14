@@ -111,7 +111,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full bg-white/80 backdrop-blur-md border border-primary/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-w-lg h-[580px]"
+            className="w-full bg-white/80 backdrop-blur-md border border-primary/10 rounded-2xl shadow-2xl overflow-hidden max-w-lg"
           >
             {/* Window Titlebar */}
             <div className="flex items-center justify-between px-3 py-2 md:px-4 md:py-3 bg-primary/[0.02] border-b border-primary/10 gap-3">
@@ -150,10 +150,10 @@ export default function Hero() {
             </div>
 
             {/* Window Content */}
-            <div className="flex-1 min-h-0 p-4 md:p-5 overflow-y-auto font-mono text-[11px] sm:text-xs leading-relaxed bg-zinc-950 text-zinc-300 custom-scrollbar relative select-none">
+            <div className="p-4 md:p-5 font-mono text-[11px] sm:text-xs leading-relaxed bg-zinc-950 text-zinc-300 relative select-none">
               <AnimatePresence mode="wait">
                 {activeTab === 'code' && (
-                  <motion.div key="code-tab" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="h-full overflow-auto custom-scrollbar">
+                  <motion.div key="code-tab" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
                     <pre className="text-emerald-300 whitespace-pre-wrap break-words leading-relaxed">{JSON.stringify({
                       name: profile.name,
                       role: 'Senior Software Engineer',
@@ -165,7 +165,7 @@ export default function Hero() {
                   </motion.div>
                 )}
                 {activeTab === 'metrics' && (
-                  <motion.div key="metrics-tab" role="region" aria-label="Portfolio impact" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="h-full grid grid-rows-5 gap-2">
+                  <motion.div key="metrics-tab" role="region" aria-label="Portfolio impact" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="grid gap-2">
                     {profile.impactStats.map((stat) => {
                       const { Icon, color, ring } = impactVisuals[stat.label as keyof typeof impactVisuals];
                       return (
@@ -184,7 +184,7 @@ export default function Hero() {
                   </motion.div>
                 )}
                 {activeTab === 'stack' && (
-                  <motion.div key="stack-tab" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="h-full overflow-auto custom-scrollbar space-y-4">
+                  <motion.div key="stack-tab" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-4">
                     {portfolioData.skills.map((group) => (
                       <div key={group.category}>
                         <span className="text-[9px] text-zinc-500 uppercase tracking-widest block mb-2">{group.category}</span>
