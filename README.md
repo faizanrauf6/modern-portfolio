@@ -101,9 +101,17 @@ The production build is configured to generate Next.js standalone output. Config
 
 ## Deployment
 
-Deploy to Vercel with the Next.js framework preset and the repository root as the project directory. Vercel uses the standard install and build commands automatically.
+[View the live portfolio](https://modern-portfolio-one-khaki.vercel.app).
 
-Set `SITE_URL` to the primary production URL in the project's environment settings. Optional AI and GitHub credentials can be configured there as well. Connect the GitHub repository to enable production deployments from `main` and preview deployments for pull requests.
+The site uses Vercel's Next.js framework preset and the repository root as the project directory. Deployments are currently published manually:
+
+```bash
+npx vercel login
+npx vercel link --project modern-portfolio --scope faizanrauf6s-projects --yes
+npx vercel deploy --prod --scope faizanrauf6s-projects
+```
+
+Set `SITE_URL` to the primary production URL in the project's environment settings. Optional AI and GitHub credentials can be configured there as well. GitHub pushes update the repository; publish a new Vercel deployment to make those changes live.
 
 Local Vercel metadata and environment files are excluded from version control and deployment uploads.
 
