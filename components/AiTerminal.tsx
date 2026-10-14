@@ -17,6 +17,7 @@ type ChatMessage = { role: 'user' | 'assistant'; content: string };
 
 const { profile, skills, projects } = portfolioData;
 const FIRST = profile.displayName;
+const TERMINAL_HOST = profile.name.trim().split(/\s+/).map((part) => part[0]).join('').toLowerCase();
 
 const SUGGESTIONS = [
   `What is ${FIRST}'s approach to solution architecture?`,
@@ -373,7 +374,7 @@ export default function AiTerminal() {
                   return (
                     <div key={entry.id} className="break-words">
                       <span className="text-highlight select-none">
-                        visitor@mz&nbsp;~&nbsp;${' '}
+                        visitor@{TERMINAL_HOST}&nbsp;~&nbsp;${' '}
                       </span>
                       <span className="text-bg">{entry.text}</span>
                     </div>
@@ -425,7 +426,7 @@ export default function AiTerminal() {
             {/* Prompt */}
             <div className="flex items-center gap-2 px-4 py-3 border-t border-bg/15 shrink-0">
               <span className="text-highlight shrink-0 select-none">
-                visitor@mz&nbsp;~&nbsp;$
+                visitor@{TERMINAL_HOST}&nbsp;~&nbsp;$
               </span>
               <input
                 ref={inputRef}

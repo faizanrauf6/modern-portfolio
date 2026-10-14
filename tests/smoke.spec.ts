@@ -195,11 +195,17 @@ test('GitHub section exposes six repositories and a contribution calendar', asyn
 });
 
 test('AI terminal opens, shows suggestions, and answers', async ({ page }) => {
+  await page.route('**/api/chat', (route) => route.fulfill({
+    status: 200,
+    contentType: 'text/plain',
+    body: 'Availability is not specified. Contact Faizan directly.',
+  }));
   await page.goto('/');
   await page.getByRole('button', { name: /open the ai terminal/i }).click();
 
   const input = page.getByPlaceholder(/type "help"/i);
   await expect(input).toBeVisible();
+  await expect(page.getByText(/^visitor@mfr\s+~\s+\$/)).toHaveCount(1);
 
   await input.focus();
   await expect(page.getByText(/try one/i)).toBeVisible();
@@ -209,8 +215,10 @@ test('AI terminal opens, shows suggestions, and answers', async ({ page }) => {
   await expect(
     page.getByText('$ Is he available for remote work?'),
   ).toBeVisible();
-  // Real answer or the offline notice — either proves the request pipe works.
-  await expect(page.locator('pre').last()).not.toBeEmpty({ timeout: 15000 });
+  await expect(page.getByText(/^visitor@mfr\s+~\s+\$/)).toHaveCount(2);
+  // Keep browser checks deterministic and avoid spending a configured API key.
+  // The API route is tested separately in chat.spec.ts.
+  await expect(page.locator('pre').last()).toHaveText('Availability is not specified. Contact Faizan directly.', { timeout: 15000 });
 });
 
 test('mobile navbar collapses into a working menu', async ({ page }) => {
