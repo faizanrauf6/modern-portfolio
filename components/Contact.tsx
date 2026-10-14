@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           <div>
-            <h2 className="text-4xl font-medium tracking-tight mb-7">Let&apos;s build <br /><span className="text-accent">together.</span></h2>
+            <h2 className="text-xl min-[375px]:text-2xl sm:text-3xl xl:text-4xl font-medium tracking-tight mb-7 whitespace-nowrap">Let&apos;s build <span className="text-accent">together.</span></h2>
             <p className="text-sm md:text-base text-zinc-500 max-w-md mb-8">
               Let&apos;s discuss full-stack engineering, AI-powered automation,
               and cloud delivery for your next product.
