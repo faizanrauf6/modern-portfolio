@@ -11,7 +11,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="px-6 py-24 lg:px-24 bg-bg border-b border-primary/10"
+      className="px-6 pt-24 pb-8 lg:px-24 bg-bg border-b border-primary/10"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         {/* Left: label + statement */}
@@ -56,7 +56,7 @@ export default function About() {
 
         </div>
 
-        <div className="lg:col-span-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 pt-10 border-t border-primary/10">
+        <div className="lg:col-span-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 pt-6 border-t border-primary/10">
             {facts.map((f, idx) => (
               <motion.div
                 key={f.label}
