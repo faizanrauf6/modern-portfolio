@@ -59,6 +59,27 @@ test('playground tabs switch the active demo', async ({ page }) => {
   ).toBeVisible();
 });
 
+for (const width of [320, 375, 1440]) {
+  test(`hero dashboard switches between impact cards and profile at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/');
+    await page.getByRole('button', { name: 'Impact', exact: true }).click();
+    const impact = page.getByRole('region', { name: 'Portfolio impact' });
+    await expect(impact.getByRole('article')).toHaveCount(5);
+    for (const stat of portfolioData.profile.impactStats) {
+      const card = impact.getByRole('article', { name: stat.label, exact: true });
+      await card.scrollIntoViewIfNeeded();
+      await expect(card.getByText(stat.value, { exact: true })).toBeVisible();
+      await expect(card.getByText(stat.desc, { exact: true })).toBeVisible();
+    }
+    expect(await impact.evaluate(el => el.scrollHeight)).toBeLessThanOrEqual(await impact.evaluate(el => el.clientHeight));
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+    await page.getByRole('button', { name: 'About Me', exact: true }).click();
+    await expect(impact).toBeHidden();
+    await expect(page.locator('pre').filter({ hasText: 'Muhammad Faizan Rauf' }).first()).toBeVisible();
+  });
+}
+
 test('six approved recommendations retain LinkedIn attribution only where supplied', async ({ page }) => {
   await page.goto('/');
   const section = page.locator('#testimonials');

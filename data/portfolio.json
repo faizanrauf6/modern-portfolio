@@ -5,6 +5,14 @@
     "lastName": "Rauf",
     "title": "Senior Full Stack & AI/ML Engineer | DevOps",
     "tagline": "Building full-stack platforms, AI-powered automation, and cloud-connected systems",
+    "coreStack": [
+      "Next.js",
+      "NestJS",
+      "TypeScript",
+      "Python",
+      "AWS",
+      "Docker"
+    ],
     "stack": [
       "Next.js",
       "NestJS",
@@ -560,27 +568,27 @@
       "date": "",
       "status": "approved",
       "url": "",
-      "quote": "Faizan brought a thoughtful full-stack approach to HelloCustom’s personalization and order-fulfillment workflows. He connected complex partner integrations with clear, maintainable application logic and kept the customer journey in focus. His attention to API behavior, edge cases, and reliable automation made him a valuable contributor to the project."
+      "quote": "HelloCustom’s personalization and order-fulfillment workflows benefited from Faizan’s thoughtful full-stack approach. Connecting Amazon, Etsy, Printify, Printful, and other partners called for clear, maintainable application logic, and he kept the customer journey in focus throughout. His attention to API behavior, edge cases, and reliable automation made him a valuable contributor to the project."
     },
     {
       "name": "Usman Altaf",
-      "title": "MSQuare Market",
+      "title": "QA Lead",
       "relation": "Project collaborator",
       "project": "MSQuare Market",
       "date": "",
       "status": "approved",
       "url": "",
-      "quote": "Faizan combined strong backend engineering with a practical understanding of the MSQuare marketplace. His work across wallet services, role-based administration, and AWS-backed infrastructure helped bring complex requirements into a maintainable system. He approached integration challenges carefully and built with clarity, reliability, and long-term support in mind."
+      "quote": "What stood out at MSQuare was the combination of strong backend engineering and a practical understanding of the marketplace. Across wallet services, role-based administration, and AWS-backed infrastructure, Faizan turned complex requirements into a maintainable system. Integration challenges received careful attention, with clarity, reliability, and long-term support guiding his work."
     },
     {
       "name": "Nasir Mehmood",
-      "title": "Mahir Company",
+      "title": "Lead Manager",
       "relation": "Project collaborator",
       "project": "Mahir Company",
       "date": "",
       "status": "approved",
       "url": "",
-      "quote": "Faizan contributed across Mahir Company’s website, admin panel, and MongoDB-backed APIs with a clear understanding of how the pieces fit together. He worked closely with product, design, and server teams to turn requirements into useful features. His ability to support application development, workflow automation, and deployment made him a dependable full-stack contributor."
+      "quote": "From Mahir Company’s website and admin panel to its MongoDB-backed APIs, Faizan understood how the pieces fit together. Close collaboration with our product, design, and server teams helped him turn requirements into useful features. We could depend on his full-stack contribution across application development, workflow automation, and deployment."
     },
     {
       "name": "Khizar Rehman",
@@ -590,7 +598,7 @@
       "date": "",
       "status": "approved",
       "url": "",
-      "quote": "Faizan contributed strong full-stack engineering to SpeakShift’s real-time communication features. His work connecting AI transcription, multilingual translation, live captions, and group chat helped bring a complex product experience together. He approached integration challenges thoughtfully and kept reliability and maintainability in focus."
+      "quote": "Bringing AI transcription, multilingual translation, live captions, and group chat together was a complex part of SpeakShift’s real-time communication experience. Faizan’s strong full-stack engineering helped connect those features into a cohesive product. I appreciated his thoughtful approach to integration challenges and his consistent focus on reliability and maintainability."
     }
   ],
   "certifications": [

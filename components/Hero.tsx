@@ -2,9 +2,17 @@
 
 import { motion, AnimatePresence } from 'motion/react';
 import { useState } from 'react';
-import { Github, Linkedin, ArrowRight, Code2, TrendingUp, Layers } from 'lucide-react';
+import { Github, Linkedin, ArrowRight, Code2, TrendingUp, Layers, Users, BriefcaseBusiness, Handshake, ShieldCheck } from 'lucide-react';
 import portfolioData from '@/data/portfolio.json';
 import ResumeModal from '@/components/ResumeModal';
+
+const impactVisuals = {
+  'Active Users': { Icon: Users, color: 'text-blue-400', ring: 'border-blue-400/25 bg-blue-400/5' },
+  'Years of experience': { Icon: BriefcaseBusiness, color: 'text-violet-400', ring: 'border-violet-400/25 bg-violet-400/5' },
+  'Perf. Increase': { Icon: TrendingUp, color: 'text-emerald-400', ring: 'border-emerald-400/25 bg-emerald-400/5' },
+  'Contract Impact': { Icon: Handshake, color: 'text-amber-400', ring: 'border-amber-400/25 bg-amber-400/5' },
+  'URLs evaluated': { Icon: ShieldCheck, color: 'text-cyan-400', ring: 'border-cyan-400/25 bg-cyan-400/5' },
+};
 
 export default function Hero() {
   const { profile } = portfolioData;
@@ -103,7 +111,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full bg-white/80 backdrop-blur-md border border-primary/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-w-lg aspect-[4/3] md:aspect-[1.25]"
+            className="w-full bg-white/80 backdrop-blur-md border border-primary/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-w-lg h-[580px]"
           >
             {/* Window Titlebar */}
             <div className="flex items-center justify-between px-3 py-2 md:px-4 md:py-3 bg-primary/[0.02] border-b border-primary/10 gap-3">
@@ -116,6 +124,7 @@ export default function Hero() {
               <div className="flex bg-primary/5 border border-primary/10 rounded-lg p-0.5 text-[10px] md:text-xs font-mono overflow-x-auto no-scrollbar min-w-0">
                 <button 
                   onClick={() => setActiveTab('code')}
+                  aria-pressed={activeTab === 'code'}
                   className={`px-2.5 py-1 rounded-md transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap shrink-0 ${activeTab === 'code' ? 'bg-white shadow-sm text-primary font-medium' : 'text-zinc-500 hover:text-zinc-800'}`}
                 >
                   <Code2 className="w-3 h-3 text-blue-500" />
@@ -123,13 +132,15 @@ export default function Hero() {
                 </button>
                 <button 
                   onClick={() => setActiveTab('metrics')}
+                  aria-pressed={activeTab === 'metrics'}
                   className={`px-2.5 py-1 rounded-md transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap shrink-0 ${activeTab === 'metrics' ? 'bg-white shadow-sm text-primary font-medium' : 'text-zinc-500 hover:text-zinc-800'}`}
                 >
                   <TrendingUp className="w-3 h-3 text-emerald-500" />
-                  AI Results
+                  Impact
                 </button>
                 <button 
                   onClick={() => setActiveTab('stack')}
+                  aria-pressed={activeTab === 'stack'}
                   className={`px-2.5 py-1 rounded-md transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap shrink-0 ${activeTab === 'stack' ? 'bg-white shadow-sm text-primary font-medium' : 'text-zinc-500 hover:text-zinc-800'}`}
                 >
                   <Layers className="w-3 h-3 text-purple-500" />
@@ -139,7 +150,7 @@ export default function Hero() {
             </div>
 
             {/* Window Content */}
-            <div className="flex-1 p-5 md:p-6 overflow-y-auto font-mono text-[11px] sm:text-xs leading-relaxed bg-zinc-950 text-zinc-300 custom-scrollbar relative select-none">
+            <div className="flex-1 min-h-0 p-4 md:p-5 overflow-y-auto font-mono text-[11px] sm:text-xs leading-relaxed bg-zinc-950 text-zinc-300 custom-scrollbar relative select-none">
               <AnimatePresence mode="wait">
                 {activeTab === 'code' && (
                   <motion.div key="code-tab" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="h-full overflow-auto custom-scrollbar">
@@ -148,24 +159,28 @@ export default function Hero() {
                       role: 'Senior Software Engineer',
                       company: 'PureLogics',
                       focus: ['Full Stack', 'AI/ML', 'DevOps'],
-                      stack: profile.stack.slice(0, 6),
+                      stack: profile.coreStack,
                       location: profile.location,
                     }, null, 2)}</pre>
                   </motion.div>
                 )}
                 {activeTab === 'metrics' && (
-                  <motion.div key="metrics-tab" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="h-full overflow-auto custom-scrollbar space-y-3">
-                    <p className="text-[10px] text-zinc-400">WebShield AI · offline temporal evaluation · 36,910 URLs</p>
-                    {[
-                      { label: 'F1 score', value: '72.87%' },
-                      { label: 'Precision', value: '96.84%' },
-                      { label: 'Recall', value: '58.41%' },
-                    ].map((metric) => (
-                      <div key={metric.label} className="p-3 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-between">
-                        <span className="text-zinc-400">{metric.label}</span>
-                        <span className="text-lg font-semibold text-emerald-300">{metric.value}</span>
-                      </div>
-                    ))}
+                  <motion.div key="metrics-tab" role="region" aria-label="Portfolio impact" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="h-full grid grid-rows-5 gap-2">
+                    {profile.impactStats.map((stat) => {
+                      const { Icon, color, ring } = impactVisuals[stat.label as keyof typeof impactVisuals];
+                      return (
+                        <article key={stat.label} aria-label={stat.label} className="flex items-center justify-between gap-3 p-2.5 sm:p-3 bg-zinc-900 border border-zinc-800 rounded-2xl">
+                          <div className="min-w-0">
+                            <h2 className="text-[9px] leading-tight uppercase tracking-[0.12em] text-zinc-400 mb-0.5">{stat.label}</h2>
+                            <p className="text-xl font-semibold tracking-tight text-white leading-tight">{stat.value}</p>
+                            <p className={`text-[10px] leading-tight mt-0.5 ${color}`}>{stat.desc}</p>
+                          </div>
+                          <div aria-hidden="true" className={`shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 flex items-center justify-center ${color} ${ring}`}>
+                            <Icon className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={1.5} />
+                          </div>
+                        </article>
+                      );
+                    })}
                   </motion.div>
                 )}
                 {activeTab === 'stack' && (
