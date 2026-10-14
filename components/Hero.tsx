@@ -44,9 +44,9 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium tracking-tight leading-[0.95] md:leading-[0.9] mb-8 font-sans">
-              {profile.displayName} <br />
+              {profile.name.split(' ')[0]} <br />
               <span className="text-accent hover:text-primary transition-colors duration-300 relative inline-block group">
-                {profile.lastName}
+                {profile.name.split(' ').slice(1).join(' ')}
                 <span className="absolute bottom-1 left-0 w-0 h-1 bg-highlight group-hover:w-full transition-all duration-300" />
               </span>
             </h1>
@@ -119,21 +119,21 @@ export default function Hero() {
                   className={`px-2.5 py-1 rounded-md transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap shrink-0 ${activeTab === 'code' ? 'bg-white shadow-sm text-primary font-medium' : 'text-zinc-500 hover:text-zinc-800'}`}
                 >
                   <Code2 className="w-3 h-3 text-blue-500" />
-                  profile.json
+                  About Me
                 </button>
                 <button 
                   onClick={() => setActiveTab('metrics')}
                   className={`px-2.5 py-1 rounded-md transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap shrink-0 ${activeTab === 'metrics' ? 'bg-white shadow-sm text-primary font-medium' : 'text-zinc-500 hover:text-zinc-800'}`}
                 >
                   <TrendingUp className="w-3 h-3 text-emerald-500" />
-                  evaluation.json
+                  AI Results
                 </button>
                 <button 
                   onClick={() => setActiveTab('stack')}
                   className={`px-2.5 py-1 rounded-md transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap shrink-0 ${activeTab === 'stack' ? 'bg-white shadow-sm text-primary font-medium' : 'text-zinc-500 hover:text-zinc-800'}`}
                 >
                   <Layers className="w-3 h-3 text-purple-500" />
-                  stack.json
+                  Tech Stack
                 </button>
               </div>
             </div>

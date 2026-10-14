@@ -11,7 +11,7 @@ import {
   Layers,
   Sparkles,
   MessageCircle,
-  KeyRound,
+  BookOpen,
   Cookie,
   GitBranch,
   Target,
@@ -24,7 +24,7 @@ import PipelineDiagram from '@/components/blog/PipelineDiagram';
 import { H2, P, UL, LI, Code, Callout, StatRow, CompareGrid } from '@/components/blog/Prose';
 
 const MORE = [
-  { href: '/blog/how-jwt-works', title: 'How JWT Works', icon: KeyRound },
+  { href: '/blog/how-claude-skills-and-harnesses-work', title: 'Claude Skills & Harnesses', icon: BookOpen },
   { href: '/blog/how-sessions-work', title: 'How Sessions Work', icon: Cookie },
   { href: '/blog/how-cicd-works', title: 'How CI/CD Works', icon: GitBranch },
   { href: '/blog/how-redis-caching-works', title: 'How Redis Caching Works', icon: Zap },

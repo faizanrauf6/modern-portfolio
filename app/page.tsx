@@ -30,11 +30,11 @@ export default function PortfolioPage() {
     },
     {
       href: '/project',
-      title: 'Selected Projects',
+      title: 'Major Project',
       desc: 'Blockchain wallets, e-commerce automation, healthcare integrations, and AI-powered applications.',
       icon: FolderGit2,
       color: 'text-purple-500 bg-purple-500/5 border-purple-500/10',
-      badge: 'MSQuare · NurseBrain · WebShield AI'
+      badge: 'MSQuare · HelloCustom · SpeakShift'
     },
     {
       href: '/playground',
@@ -47,10 +47,10 @@ export default function PortfolioPage() {
     {
       href: '/blog',
       title: 'How Things Work',
-      desc: 'Animated, beginner-friendly breakdowns of RAG, JWT, sessions, and CI/CD — real request flows, step by step.',
+      desc: 'Animated, beginner-friendly breakdowns of RAG, Claude skills, AI harnesses, and CI/CD — real workflows, step by step.',
       icon: BookOpen,
       color: 'text-rose-500 bg-rose-500/5 border-rose-500/10',
-      badge: 'RAG · JWT · CI/CD'
+      badge: 'RAG · Claude · CI/CD'
     }
   ];
 

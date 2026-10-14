@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog/evaluating-phishing-detection-models',
     '/blog/serving-python-ml-models-with-nestjs',
     '/blog/how-rag-works',
-    '/blog/how-jwt-works',
+    '/blog/how-claude-skills-and-harnesses-work',
     '/blog/how-sessions-work',
     '/blog/how-cicd-works',
     '/blog/how-redis-caching-works',

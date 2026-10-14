@@ -210,9 +210,9 @@ export default function ThemeBuilder() {
                   {portfolioData.profile.title}
                 </span>
                 <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-primary mt-2 leading-tight">
-                  {portfolioData.profile.displayName}{' '}
+                  {portfolioData.profile.name.split(' ')[0]}{' '}
                   <span className="text-accent">
-                    {portfolioData.profile.lastName}
+                    {portfolioData.profile.name.split(' ').slice(1).join(' ')}
                   </span>
                 </h3>
                 <p className="text-sm text-text/60 mt-3 max-w-sm leading-relaxed">

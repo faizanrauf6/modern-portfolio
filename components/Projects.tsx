@@ -19,7 +19,7 @@ export default function Projects() {
     <section id="projects" className="px-6 py-24 lg:px-24 bg-primary text-bg overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <h2 className="text-4xl font-medium tracking-tight">Selected <br /><span className="opacity-50">Projects.</span></h2>
+          <h2 className="text-4xl font-medium tracking-tight">Major <br /><span className="opacity-50">Project.</span></h2>
           <p className="max-w-sm opacity-60 text-sm">
             A showcase of enterprise solutions and high-impact platforms delivered over the years. Click on a card to see full details.
           </p>

@@ -52,8 +52,8 @@ export default function ProjectsPage() {
             Case Studies
           </span>
           <h1 className="text-4xl sm:text-5xl font-medium tracking-tight mt-4">
-            Selected <br />
-            <span className="text-accent">Projects.</span>
+            Major <br />
+            <span className="text-accent">Project.</span>
           </h1>
         </div>
 

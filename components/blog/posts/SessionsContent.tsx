@@ -8,7 +8,7 @@ import {
   ShieldCheck,
   LogOut,
   BrainCog,
-  KeyRound,
+  BookOpen,
   GitBranch,
   Layers,
   Gauge,
@@ -20,7 +20,7 @@ import { H2, P, UL, LI, Code, Callout, StatRow, CompareGrid } from '@/components
 
 const MORE = [
   { href: '/blog/how-rag-works', title: 'How RAG Works', icon: BrainCog },
-  { href: '/blog/how-jwt-works', title: 'How JWT Works', icon: KeyRound },
+  { href: '/blog/how-claude-skills-and-harnesses-work', title: 'Claude Skills & Harnesses', icon: BookOpen },
   { href: '/blog/how-cicd-works', title: 'How CI/CD Works', icon: GitBranch },
   { href: '/blog/how-redis-caching-works', title: 'How Redis Caching Works', icon: Zap },
 ];

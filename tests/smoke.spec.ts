@@ -2,16 +2,17 @@ import { test, expect } from '@playwright/test';
 import portfolioData from '../data/portfolio.json';
 
 const ROUTES: { path: string; heading: RegExp }[] = [
-  { path: '/', heading: /Faizan/i },
+  { path: '/', heading: /Muhammad Faizan Rauf/i },
   { path: '/experience', heading: /Professional/i },
   { path: '/skills', heading: /Tools & Technologies/i },
-  { path: '/project', heading: /Selected/i },
+  { path: '/project', heading: /Major Project/i },
   { path: '/playground', heading: /Playground/i },
   { path: '/blog', heading: /How things/i },
   { path: '/blog/how-mcp-tool-calling-works', heading: /MCP/i },
   { path: '/blog/building-reliable-ai-automation', heading: /automation/i },
   { path: '/blog/evaluating-phishing-detection-models', heading: /phishing/i },
   { path: '/blog/serving-python-ml-models-with-nestjs', heading: /NestJS/i },
+  { path: '/blog/how-claude-skills-and-harnesses-work', heading: /Claude.*skills/i },
 ];
 
 for (const { path, heading } of ROUTES) {
@@ -58,12 +59,17 @@ test('playground tabs switch the active demo', async ({ page }) => {
   ).toBeVisible();
 });
 
-test('recommendations distinguish supplied quotes from unapproved drafts', async ({ page }) => {
+test('six approved recommendations retain LinkedIn attribution only where supplied', async ({ page }) => {
   await page.goto('/');
   const section = page.locator('#testimonials');
-  await expect(section.locator('figure')).toHaveCount(5);
-  await expect(section.locator('blockquote')).toHaveCount(2);
-  await expect(section.getByText('Draft · awaiting approval', { exact: true })).toHaveCount(3);
+  await expect(section.locator('figure')).toHaveCount(6);
+  await expect(section.locator('blockquote')).toHaveCount(6);
+  for (const name of ['Stephen Chin', 'Usman Altaf', 'Nasir Mehmood', 'Khizar Rehman']) {
+    const card = section.locator('figure').filter({ hasText: name });
+    await expect(card.getByText('LinkedIn recommendation', { exact: true })).toHaveCount(0);
+    await expect(card.getByRole('link')).toHaveCount(0);
+    await expect(card.getByText(/Suggested wording|Draft · awaiting approval/)).toHaveCount(0);
+  }
   const fullReview = section.getByRole('button', { name: 'Read full recommendation' });
   await fullReview.click();
   await expect(section.getByText(/Wishing him continued success/)).toBeVisible();

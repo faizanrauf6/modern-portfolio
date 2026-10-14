@@ -11,7 +11,7 @@ import {
   Trash2,
   Gauge,
   Terminal,
-  KeyRound,
+  BookOpen,
   Cookie,
   GitBranch,
 } from 'lucide-react';
@@ -22,7 +22,7 @@ import { H2, P, UL, LI, Code, Callout, StatRow, CompareGrid } from '@/components
 const MORE = [
   { href: '/blog/how-to-use-redis-in-nodejs', title: 'Use Redis in a Node.js API', icon: Terminal },
   { href: '/blog/how-sessions-work', title: 'How Sessions Work', icon: Cookie },
-  { href: '/blog/how-jwt-works', title: 'How JWT Works', icon: KeyRound },
+  { href: '/blog/how-claude-skills-and-harnesses-work', title: 'Claude Skills & Harnesses', icon: BookOpen },
   { href: '/blog/how-cicd-works', title: 'How CI/CD Works', icon: GitBranch },
 ];
 

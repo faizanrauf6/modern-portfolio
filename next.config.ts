@@ -24,7 +24,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: '/blog/rag', destination: '/blog/how-rag-works', permanent: true },
-      { source: '/blog/jwt', destination: '/blog/how-jwt-works', permanent: true },
+      { source: '/blog/jwt', destination: '/blog/how-claude-skills-and-harnesses-work', permanent: true },
+      { source: '/blog/how-jwt-works', destination: '/blog/how-claude-skills-and-harnesses-work', permanent: true },
       { source: '/blog/sessions', destination: '/blog/how-sessions-work', permanent: true },
       { source: '/blog/cicd', destination: '/blog/how-cicd-works', permanent: true },
     ];

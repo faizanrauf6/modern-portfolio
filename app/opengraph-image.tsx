@@ -48,15 +48,15 @@ export default function OpengraphImage() {
           <div
             style={{
               display: 'flex',
-              fontSize: 88,
+              fontSize: 72,
               fontWeight: 600,
               letterSpacing: -3,
               lineHeight: 1,
             }}
           >
-            {profile.displayName}
+            {profile.name.split(' ')[0]}
             &nbsp;
-            <span style={{ color: theme.accent }}>{profile.lastName}</span>
+            <span style={{ color: theme.accent }}>{profile.name.split(' ').slice(1).join(' ')}</span>
           </div>
           <div
             style={{

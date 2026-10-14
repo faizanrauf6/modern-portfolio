@@ -218,7 +218,8 @@
       "period": "Sep 2020 – Feb 2022",
       "location": "Lahore, Pakistan",
       "description": [
-        "Wrote data-processing and visualization scripts for client software, automating repetitive data-handling workflows."
+        "Wrote data-processing and visualization scripts for client software, automating repetitive data-handling workflows.",
+        "Prepared and validated structured datasets for analytics and AI/ML workflows, focusing on data quality, repeatable transformations, and consistent reporting."
       ]
     },
     {
@@ -227,7 +228,8 @@
       "period": "May 2019 – Feb 2020",
       "location": "Islamabad, Pakistan",
       "description": [
-        "Developed web applications and MongoDB-backed services; wrote unit tests, fixed defects, and improved performance and UI/UX."
+        "Developed web applications and MongoDB-backed services; wrote unit tests, fixed defects, and improved performance and UI/UX.",
+        "Supported application deployments, environment configuration, and release troubleshooting for web applications and backend services."
       ]
     },
     {
@@ -285,22 +287,47 @@
       "linkType": "website"
     },
     {
-      "title": "NurseBrain",
-      "category": "Healthcare Data Integration",
-      "impact": "2 EHR integrations",
+      "title": "SpeakShift",
+      "category": "AI Transcription & Multilingual Communication",
+      "impact": "Live multilingual communication",
       "tags": [
-        "FHIR",
-        "Epic",
-        "Cerner",
-        "Real-Time Integration"
+        "AI Transcription",
+        "Translation",
+        "Live Captions",
+        "Video Communication",
+        "Group Chat"
       ],
-      "description": "Implemented FHIR-based patient data access across Epic and Cerner, reducing manual entry through real-time, read-only integration.",
-      "longDescription": "Implemented FHIR-based patient data access across Epic and Cerner, reducing manual entry through real-time, read-only integration.",
+      "description": "Worked on video communication with AI-powered transcription, multilingual translation, live captions, and group chat.",
+      "longDescription": "Worked on video communication with AI-powered transcription, multilingual translation, live captions, and group chat.",
       "features": [
-        "FHIR-based access to patient data across two EHR systems.",
-        "Real-time, read-only integration to reduce manual data entry."
+        "AI-powered transcription and multilingual translation.",
+        "Live captions for video communication.",
+        "Group chat workflows."
       ],
-      "link": "https://nursebrain.com/",
+      "link": "https://speakshift.ai/",
+      "linkType": "website"
+    },
+    {
+      "title": "AI Agent Workflows at PureLogics",
+      "category": "AI / Developer Tooling",
+      "impact": "Multi-Agent Delivery",
+      "tags": [
+        "Claude API",
+        "MCP",
+        "Claude Code",
+        "AI Agents",
+        "RAG",
+        "Node.js"
+      ],
+      "description": "Co-built production LLM features and multi-agent delivery workflows with the Anthropic Claude API, MCP, and RAG.",
+      "longDescription": "Co-built Anthropic Claude API and Model Context Protocol (MCP) integrations in Node.js/React products to support LLM-powered features backed by RAG. Collaborated on Claude Code subagent workflows that split complex features across specialized research, implementation, and review agents, with coordinated handoffs for day-to-day engineering delivery.",
+      "features": [
+        "Anthropic Claude API + MCP tooling integrated into production Node.js/React apps",
+        "RAG pipeline powering LLM-driven features on real product data",
+        "Claude Code subagent orchestration: specialized agents collaborate and hand off research, implementation, and review",
+        "Rolled the workflow out to the engineering team as part of day-to-day delivery"
+      ],
+      "link": "",
       "linkType": "website"
     },
     {
@@ -346,27 +373,6 @@
       "linkType": "website"
     },
     {
-      "title": "SpeakShift",
-      "category": "AI Transcription & Multilingual Communication",
-      "impact": "Live multilingual communication",
-      "tags": [
-        "AI Transcription",
-        "Translation",
-        "Live Captions",
-        "Video Communication",
-        "Group Chat"
-      ],
-      "description": "Worked on video communication with AI-powered transcription, multilingual translation, live captions, and group chat.",
-      "longDescription": "Worked on video communication with AI-powered transcription, multilingual translation, live captions, and group chat.",
-      "features": [
-        "AI-powered transcription and multilingual translation.",
-        "Live captions for video communication.",
-        "Group chat workflows."
-      ],
-      "link": "https://speakshift.ai/",
-      "linkType": "website"
-    },
-    {
       "title": "Mahir Company",
       "category": "Full-Stack Web Platform",
       "impact": "Website, admin & APIs",
@@ -387,6 +393,25 @@
         "AWS deployment, Docker environments, and release support."
       ],
       "link": "https://mahircompany.com/",
+      "linkType": "website"
+    },
+    {
+      "title": "NurseBrain",
+      "category": "Healthcare Data Integration",
+      "impact": "2 EHR integrations",
+      "tags": [
+        "FHIR",
+        "Epic",
+        "Cerner",
+        "Real-Time Integration"
+      ],
+      "description": "Implemented FHIR-based patient data access across Epic and Cerner, reducing manual entry through real-time, read-only integration.",
+      "longDescription": "Implemented FHIR-based patient data access across Epic and Cerner, reducing manual entry through real-time, read-only integration.",
+      "features": [
+        "FHIR-based access to patient data across two EHR systems.",
+        "Real-time, read-only integration to reduce manual data entry."
+      ],
+      "link": "",
       "linkType": "website"
     },
     {
@@ -533,7 +558,7 @@
       "relation": "Client",
       "project": "HelloCustom",
       "date": "",
-      "status": "draft",
+      "status": "approved",
       "url": "",
       "quote": "Faizan brought a thoughtful full-stack approach to HelloCustom’s personalization and order-fulfillment workflows. He connected complex partner integrations with clear, maintainable application logic and kept the customer journey in focus. His attention to API behavior, edge cases, and reliable automation made him a valuable contributor to the project."
     },
@@ -543,7 +568,7 @@
       "relation": "Project collaborator",
       "project": "MSQuare Market",
       "date": "",
-      "status": "draft",
+      "status": "approved",
       "url": "",
       "quote": "Faizan combined strong backend engineering with a practical understanding of the MSQuare marketplace. His work across wallet services, role-based administration, and AWS-backed infrastructure helped bring complex requirements into a maintainable system. He approached integration challenges carefully and built with clarity, reliability, and long-term support in mind."
     },
@@ -553,9 +578,19 @@
       "relation": "Project collaborator",
       "project": "Mahir Company",
       "date": "",
-      "status": "draft",
+      "status": "approved",
       "url": "",
       "quote": "Faizan contributed across Mahir Company’s website, admin panel, and MongoDB-backed APIs with a clear understanding of how the pieces fit together. He worked closely with product, design, and server teams to turn requirements into useful features. His ability to support application development, workflow automation, and deployment made him a dependable full-stack contributor."
+    },
+    {
+      "name": "Khizar Rehman",
+      "title": "Project Lead, SpeakShift",
+      "relation": "Project lead",
+      "project": "SpeakShift",
+      "date": "",
+      "status": "approved",
+      "url": "",
+      "quote": "Faizan contributed strong full-stack engineering to SpeakShift’s real-time communication features. His work connecting AI transcription, multilingual translation, live captions, and group chat helped bring a complex product experience together. He approached integration challenges thoughtfully and kept reliability and maintainability in focus."
     }
   ],
   "certifications": [

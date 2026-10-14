@@ -25,9 +25,11 @@ function RecommendationCard({ testimonial: t, index }: { testimonial: Testimonia
     >
       <div className="flex items-center justify-between gap-3 mb-5">
         <Quote className="w-5 h-5 text-accent shrink-0" />
-        <span className={`text-[9px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-full ${isDraft ? 'bg-amber-500/10 text-amber-700' : 'bg-highlight/10 text-primary'}`}>
-          {isDraft ? 'Draft · awaiting approval' : 'LinkedIn recommendation'}
-        </span>
+        {(isDraft || t.status === 'linkedin') && (
+          <span className={`text-[9px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-full ${isDraft ? 'bg-amber-500/10 text-amber-700' : 'bg-highlight/10 text-primary'}`}>
+            {isDraft ? 'Suggested wording' : 'LinkedIn recommendation'}
+          </span>
+        )}
       </div>
       {isDraft ? (
         <p id={bodyId} className="text-sm text-text/70 leading-relaxed font-sans whitespace-pre-line">{text}</p>
@@ -40,15 +42,15 @@ function RecommendationCard({ testimonial: t, index }: { testimonial: Testimonia
         </button>
       )}
       <figcaption className="mt-5 pt-4 border-t border-primary/10">
-        <p className="text-sm font-semibold text-primary">{isDraft ? `Draft for ${t.name}` : t.name}</p>
+        <p className="text-sm font-semibold text-primary">{t.name}</p>
         <p className="text-xs text-text/60 mt-0.5">{t.title}</p>
         <p className="text-xs text-text/50 mt-1">{t.project}</p>
         <p className="text-[10px] font-mono uppercase tracking-widest text-text/40 mt-2">
           {t.relation}{t.date ? ` · ${t.date}` : ''}
         </p>
         {isDraft ? (
-          <p className="text-xs text-text/50 mt-3">Suggested wording for review; this has not been approved by {t.name}.</p>
-        ) : t.url ? (
+          <p className="text-xs text-text/50 mt-3">Proposed testimonial for {t.name} to review.</p>
+        ) : t.status === 'linkedin' && t.url ? (
           <a href={t.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-xs text-primary mt-3 hover:underline">
             LinkedIn profile <ExternalLink className="w-3 h-3" />
           </a>
@@ -71,7 +73,7 @@ export default function Testimonials() {
             <h2 id="testimonials-title" className="text-3xl md:text-4xl font-semibold tracking-tight text-primary">What colleagues <span className="text-accent">say.</span></h2>
           </div>
           <p className="max-w-md text-sm text-text/60 leading-relaxed font-sans">
-            Two recommendations from LinkedIn, plus three proposed testimonial drafts for client and collaborator review.
+            Recommendations from teammates, project leads, and clients across full-stack engineering, AI, and product delivery.
           </p>
         </motion.div>
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
