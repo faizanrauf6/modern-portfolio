@@ -30,19 +30,39 @@ for (const { path, heading } of ROUTES) {
   });
 }
 
-test('updated architect identity reaches metadata, the profile dashboard, and the downloadable CV', async ({ page, request }) => {
+test('final CV identity reaches metadata, the profile dashboard, and the downloadable CV', async ({ page, request }) => {
   await page.goto('/');
-  await expect(page).toHaveTitle(/Solution Architect.*AI\/ML & Cloud Systems Engineer/);
+  await expect(page).toHaveTitle(/Senior Software and AI\/ML Engineer.*Solution Architecture.*Cloud Systems/);
   const person = await page.locator('script[type="application/ld+json"]').first().textContent();
-  expect(JSON.parse(person!).jobTitle).toBe('Solution Architect | AI/ML & Cloud Systems Engineer');
-  await expect(page.locator('pre')).toContainText('Solution Architect & AI/ML Engineer');
+  expect(JSON.parse(person!).jobTitle).toBe('Senior Software and AI/ML Engineer | Solution Architecture | Cloud Systems');
+  await expect(page.locator('pre')).toContainText('Senior Software and AI/ML Engineer');
+  await expect(page.locator('#credentials')).toContainText('Professional');
+  await expect(page.locator('#credentials').getByText('Native', { exact: true })).toHaveCount(2);
   await page.getByRole('button', { name: 'View Résumé', exact: true }).click();
-  const cvPath = '/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf';
+  const cvPath = '/M_Faizan_Rauf_SSE_AI_ML_Cloud_Engineer_CV.pdf';
   await expect(page.getByRole('link', { name: 'Download', exact: true })).toHaveAttribute('href', cvPath);
   await expect(page.locator('iframe')).toHaveAttribute('src', `${cvPath}#view=FitH`);
   const pdf = await request.get(cvPath);
   expect(pdf.status()).toBe(200);
   expect((await pdf.body()).subarray(0, 5).toString()).toBe('%PDF-');
+  for (const oldPath of ['/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf', '/M_Faizan_Rauf_Senior_Full_Stack_AI_ML_DevOps_CV.pdf']) {
+    const redirect = await request.get(oldPath, { maxRedirects: 0 });
+    expect(redirect.status()).toBe(308);
+    expect(redirect.headers().location).toBe(cvPath);
+  }
+});
+
+test('final CV project sequence and integration skills are displayed', async ({ page }) => {
+  await page.goto('/project');
+  await expect(page.locator('main h3').filter({ hasText: /HelloCustom|NurseBrain|WebShield AI|SpeakShift|Save Energy Systems|Mahir Company|MSQuare Market|MAWA/ })).toHaveText([
+    'HelloCustom', 'NurseBrain', 'WebShield AI', 'SpeakShift',
+    'Save Energy Systems (SES DLC)', 'Mahir Company', 'MSQuare Market', 'MAWA',
+  ]);
+  await page.goto('/skills');
+  await expect(page.getByText('Generative AI', { exact: true })).toBeVisible();
+  await expect(page.getByText('Multi-Tenant Architecture', { exact: true })).toBeVisible();
+  await expect(page.getByText('FHIR (Epic, Cerner)', { exact: true })).toBeVisible();
+  await expect(page.getByText('JWT Authentication', { exact: true })).toBeVisible();
 });
 
 test('architecture articles are discoverable through their category and registered in the sitemap', async ({ page, request }) => {

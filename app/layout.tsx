@@ -28,6 +28,7 @@ const keywords = Array.from(
     ...(profile.stack ?? []),
     ...skills.flatMap((s) => s.items),
     'Solution Architect',
+    'Senior Software Engineer',
     'Cloud Systems Engineer',
     'Distributed Systems',
     'AI/ML Engineer',

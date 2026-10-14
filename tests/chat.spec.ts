@@ -47,6 +47,8 @@ test('streams an answer with bounded history, a compact profile, and inexpensive
     expect(sent.slice(1).every((m) => m.content.length <= 800)).toBe(true);
     expect(sent.at(-1)?.content).toBe('What did he build at HelloCustom?');
     expect(sent[0].content).toContain('Muhammad Faizan Rauf');
+    expect(sent[0].content).toContain('Senior Software and AI/ML Engineer');
+    expect(sent[0].content).toContain('7+ years of experience');
     expect(sent[0].content).toContain('HelloCustom');
     expect(sent[0].content).toContain('Epic');
     expect(sent[0].content).toContain('exam in progress');

@@ -3,28 +3,30 @@
     "name": "Muhammad Faizan Rauf",
     "displayName": "Faizan",
     "lastName": "Rauf",
-    "title": "Solution Architect | AI/ML & Cloud Systems Engineer",
-    "tagline": "Designing distributed systems, intelligent automation, and resilient cloud platforms",
+    "title": "Senior Software and AI/ML Engineer | Solution Architecture | Cloud Systems",
+    "tagline": "Building distributed systems, AI-powered automation, and cloud infrastructure",
     "coreStack": [
       "Next.js",
       "NestJS",
       "Python",
+      "LLMs",
       "Enterprise RAG",
-      "Multi-Agent Systems",
+      "AI Agents & MCP",
       "AWS",
       "Docker",
-      "CI/CD",
-      "Microservices"
+      "CI/CD"
     ],
     "stack": [
       "Next.js",
       "NestJS",
       "TypeScript",
       "Python",
+      "C#",
+      "LLMs",
       "Anthropic API",
       "Enterprise RAG",
       "MCP",
-      "Multi-Agent Systems",
+      "AI Agents",
       "AWS",
       "Docker",
       "CI/CD",
@@ -38,13 +40,13 @@
     "github": "https://github.com/faizanrauf6",
     "linkedin": "https://www.linkedin.com/in/m-faizan-rauf",
     "npm": "",
-    "resumeUrl": "/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf",
+    "resumeUrl": "/M_Faizan_Rauf_SSE_AI_ML_Cloud_Engineer_CV.pdf",
     "location": "Lahore, Pakistan",
-    "summary": "Solution Architect and AI/ML & Cloud Systems Engineer with 6+ years of experience designing distributed systems, intelligent automation pipelines, and cloud infrastructure across FinTech, healthcare, e-commerce, and IoT. Translates business goals into technical architecture, with hands-on work spanning API-first design, event-driven microservices, Anthropic APIs, enterprise RAG, and multi-agent orchestration. Builds application backends with Next.js, NestJS, and Python, and supports end-to-end delivery through AWS, Docker, and CI/CD. Project experience includes multi-tenant marketplace integrations, read-only FHIR data access, and real-time cloud-to-device communication.",
-    "yearsOfExp": "6+",
+    "summary": "Senior Software and AI/ML Engineer with 7+ years of experience designing distributed systems, AI-powered automation, and cloud infrastructure across FinTech, healthcare, e-commerce, and IoT. Translates business requirements into solution architecture, covering API-first design, event-driven microservices, and multi-tenant integrations. Builds AI workflows with the Anthropic API, enterprise RAG, Model Context Protocol (MCP), and multi-agent orchestration. Delivered production systems including marketplace integrations across 5+ partner APIs, read-only FHIR access to Epic and Cerner, and real-time cloud-to-device HVAC communication. Builds backends with Next.js, NestJS, and Python, deploys on AWS with Docker and CI/CD, and mentors engineers through code reviews and architecture guidance.",
+    "yearsOfExp": "7+",
     "stats": [
       {
-        "value": "6+",
+        "value": "7+",
         "label": "Years of experience",
         "desc": "Software development across industries"
       },
@@ -76,7 +78,7 @@
         "desc": "Across school districts"
       },
       {
-        "value": "6+",
+        "value": "7+",
         "label": "Years of experience",
         "desc": "Software development across industries"
       },
@@ -97,7 +99,7 @@
       }
     ],
     "focus": [
-      "Solution Architecture",
+      "Software Engineering",
       "AI/ML",
       "Cloud Systems"
     ],
@@ -113,6 +115,21 @@
   },
   "skills": [
     {
+      "category": "Solution Architecture",
+      "items": [
+        "System Design",
+        "Distributed Systems",
+        "Microservices",
+        "Event-Driven Architecture",
+        "API-First Design",
+        "REST APIs",
+        "GraphQL",
+        "Multi-Tenant Architecture",
+        "System Observability",
+        "Role-Based Access Control (RBAC)"
+      ]
+    },
+    {
       "category": "Frontend & Frameworks",
       "items": [
         "Next.js",
@@ -121,19 +138,6 @@
         "JavaScript",
         "Tailwind CSS",
         "Material UI"
-      ]
-    },
-    {
-      "category": "Solution Architecture",
-      "items": [
-        "Distributed Systems Design",
-        "Microservices",
-        "Event-Driven Workflows",
-        "API-First Design",
-        "REST APIs",
-        "GraphQL APIs",
-        "System Observability",
-        "Role-Based Access Control (RBAC)"
       ]
     },
     {
@@ -156,12 +160,16 @@
     {
       "category": "AI/ML & Data",
       "items": [
+        "Generative AI",
+        "Large Language Models (LLMs)",
         "Anthropic API",
         "Model Context Protocol (MCP)",
         "Retrieval-Augmented Generation (RAG)",
+        "AI Agents",
         "Multi-Agent Systems",
         "Context Window Optimization",
         "Vector Databases",
+        "Machine Learning",
         "Scikit-Learn",
         "NumPy",
         "Pandas",
@@ -169,7 +177,7 @@
       ]
     },
     {
-      "category": "Tooling & DevOps",
+      "category": "Cloud & DevOps",
       "items": [
         "Amazon Web Services (AWS)",
         "Amazon EC2",
@@ -181,7 +189,8 @@
         "CI/CD",
         "Infrastructure Automation",
         "Deployment Orchestration",
-        "Linux Server Administration"
+        "Linux Server Administration",
+        "Git"
       ]
     },
     {
@@ -191,34 +200,42 @@
         "MongoDB",
         "MySQL",
         "Amazon DynamoDB",
-        "Redis Caching",
+        "Redis",
         "SQLite"
+      ]
+    },
+    {
+      "category": "Integrations & Protocols",
+      "items": [
+        "FHIR (Epic, Cerner)",
+        "Marketplace APIs (Amazon, Etsy, Shopify, Printify, Printful)",
+        "Modbus",
+        "JWT Authentication"
       ]
     }
   ],
   "experience": [
     {
       "company": "PureLogics",
-      "role": "Solution Architect & AI/ML Engineer",
+      "role": "Senior Software and AI/ML Engineer",
       "period": "Jan 2023 – Present",
       "location": "Lahore, Pakistan",
       "description": [
-        "Design and deliver distributed application features with Next.js, NestJS, TypeScript, and event-driven microservices, separating service responsibilities and data access.",
-        "Build AI orchestration workflows with Anthropic APIs, RAG pipelines, and MCP-connected agents for cross-platform operational automation.",
-        "Build Python data-processing and ML pipelines with NumPy and Pandas for AI-enabled application features.",
-        "Integrate Socket.IO and Modbus to connect cloud applications with commercial HVAC equipment.",
-        "Configure AWS deployments and Docker environments; troubleshoot releases and optimize application performance."
+        "Design solution architecture and event-driven microservices with Next.js, NestJS, and TypeScript, with clear service boundaries and data ownership.",
+        "Build AI orchestration workflows using the Anthropic API, RAG pipelines, and MCP-connected agents for cross-platform automation, backed by Python data-processing and machine learning pipelines (NumPy, Pandas).",
+        "Connect cloud applications to commercial HVAC equipment using Socket.IO and Modbus for real-time device communication.",
+        "Configure AWS and Docker environments, troubleshoot releases, and optimize application performance; mentor engineers through code reviews, technical guidance, and architecture discussions."
       ]
     },
     {
       "company": "Mahir Company",
-      "role": "Lead Full Stack Engineer & DevOps",
+      "role": "Full Stack Engineer & DevOps",
       "period": "Feb 2022 – Jan 2023",
       "location": "Lahore, Pakistan",
       "description": [
-        "Led architecture and development of the web platform, administrative console, and MongoDB-backed APIs with product and design teams.",
+        "Led architecture and development of the consumer web platform, admin console, and scalable MongoDB-backed APIs in collaboration with product and design teams.",
         "Built data-preparation workflows and API integrations supporting AI/ML features and operational automation.",
-        "Collaborated with infrastructure teams on AWS services, Docker environments, and release pipelines for web and API services."
+        "Optimized Docker environments and AWS deployment pipelines with infrastructure teams to enable continuous releases for web and API services."
       ]
     },
     {
@@ -227,7 +244,8 @@
       "period": "Sep 2020 – Feb 2022",
       "location": "Lahore, Pakistan",
       "description": [
-        "Designed data-processing and visualization scripts for analytical software; automated ingestion and repetitive data-handling workflows."
+        "Designed Python data-processing and visualization scripts for analytical software.",
+        "Automated data ingestion and repetitive data-handling workflows, reducing manual processing effort."
       ]
     },
     {
@@ -236,7 +254,8 @@
       "period": "May 2019 – Feb 2020",
       "location": "Islamabad, Pakistan",
       "description": [
-        "Developed web services and MongoDB-backed data layers; implemented unit tests, resolved defects, and improved application performance."
+        "Developed web services and MongoDB-backed data layers for client applications.",
+        "Implemented unit tests, resolved defects, and improved application performance."
       ]
     },
     {
@@ -245,7 +264,7 @@
       "period": "Feb 2019 – May 2019",
       "location": "Islamabad, Pakistan",
       "description": [
-        "Designed Java and Kotlin mobile applications, modular client components, and backend integrations with MongoDB-based storage."
+        "Built Java and Kotlin mobile applications with modular client components and MongoDB-backed backend integrations."
       ]
     }
   ],
@@ -253,7 +272,7 @@
     {
       "title": "HelloCustom",
       "category": "E-Commerce Integration Platform",
-      "impact": "5 partner APIs",
+      "impact": "5 partner APIs + Shopify",
       "tags": [
         "Multi-Tenant Architecture",
         "Event-Driven Workflows",
@@ -265,9 +284,9 @@
         "Shopify"
       ],
       "description": "Designed multi-tenant, event-driven workflows for product personalization and order fulfillment across marketplace services.",
-      "longDescription": "Designed a multi-tenant, event-driven integration platform for product personalization and automated order fulfillment. Connected Etsy, Amazon, Printify, Printful, and ICP through five partner APIs, with additional Shopify integration support. Implemented transaction handling and retry mechanisms for automated order-processing workflows.",
+      "longDescription": "Designed multi-tenant, event-driven integration workflows for product personalization and order fulfillment across marketplace services. Integrated five partner APIs (Etsy, Amazon, Printify, Printful, ICP) plus Shopify. Implemented transaction handling and retry mechanisms for automated order-processing workflows.",
       "features": [
-        "Connected five partner APIs: Etsy, Amazon, Printify, Printful, and ICP; supported Shopify integration.",
+        "Integrated five partner APIs (Etsy, Amazon, Printify, Printful, ICP) plus Shopify.",
         "Designed multi-tenant workflows for product personalization and automated order fulfillment.",
         "Implemented transaction handling and retry mechanisms for automated order processing."
       ],
@@ -294,6 +313,29 @@
       "linkType": "website"
     },
     {
+      "title": "WebShield AI",
+      "category": "ML-Based Phishing Detection",
+      "impact": "72.87% offline F1",
+      "tags": [
+        "Next.js",
+        "NestJS",
+        "Python",
+        "Machine Learning",
+        "PostgreSQL",
+        "Redis",
+        "GitHub Actions"
+      ],
+      "description": "Built a Next.js/NestJS application with a Python ML engine and explainable website-risk analysis. Offline temporal evaluation on 36,910 URLs reported 96.84% precision, 72.87% F1, and 58.41% recall.",
+      "longDescription": "Built a Next.js/NestJS application with a Python ML engine and explainable website-risk analysis. Offline temporal evaluation on 36,910 URLs reported 96.84% precision, 72.87% F1, and 58.41% recall; these figures describe an offline evaluation rather than production accuracy. Implemented GitHub Actions CI covering tests, builds, PostgreSQL/Redis integration, and Docker isolation checks.",
+      "features": [
+        "Next.js/NestJS application with a Python ML engine and explainable website-risk analysis.",
+        "Offline temporal evaluation: 36,910 URLs, 96.84% precision, 72.87% F1, and 58.41% recall.",
+        "GitHub Actions CI for tests, builds, PostgreSQL/Redis integration, and Docker isolation checks."
+      ],
+      "link": "https://github.com/faizanrauf6/webshield-ai-fraud-detection",
+      "linkType": "repository"
+    },
+    {
       "title": "SpeakShift",
       "category": "AI-Powered Video Communication Platform",
       "impact": "Live multilingual communication",
@@ -315,7 +357,7 @@
       "linkType": "website"
     },
     {
-      "title": "SES DLC / Save Energy Systems",
+      "title": "Save Energy Systems (SES DLC)",
       "category": "Cloud-Connected IoT Platform",
       "impact": "Cloud-connected HVAC",
       "tags": [
@@ -360,51 +402,8 @@
       "linkType": "website"
     },
     {
-      "title": "MAWA",
-      "category": "Real-Time Workforce Management",
-      "impact": "Workforce communication",
-      "tags": [
-        "Task Management",
-        "Audio/Video Calling",
-        "Chat",
-        "Multilingual Communication"
-      ],
-      "description": "Designed task-management and task-history workflows with multilingual interfaces, audio/video calling, and persistent chat for distributed workforce collaboration.",
-      "longDescription": "Designed task-management and task-history workflows with multilingual interfaces for distributed workforce collaboration. Integrated audio/video calling and persistent chat to connect teams within the application.",
-      "features": [
-        "Task-management and task-history workflows for distributed teams.",
-        "Multilingual interfaces for workforce collaboration.",
-        "Integrated audio/video calling and persistent chat."
-      ],
-      "link": "https://mawaapp.com/",
-      "linkType": "website"
-    },
-    {
-      "title": "WebShield AI",
-      "category": "ML-Based Phishing Analysis",
-      "impact": "72.87% offline F1",
-      "tags": [
-        "Next.js",
-        "NestJS",
-        "Python",
-        "Machine Learning",
-        "PostgreSQL",
-        "Redis",
-        "GitHub Actions"
-      ],
-      "description": "Built a Next.js/NestJS application with a Python ML engine and explainable website-risk analysis. Offline temporal evaluation on 36,910 URLs reported 96.84% precision, 72.87% F1, and 58.41% recall.",
-      "longDescription": "Built a Next.js/NestJS application with a Python ML engine and explainable website-risk analysis. Offline temporal evaluation on 36,910 URLs reported 96.84% precision, 72.87% F1, and 58.41% recall; these figures describe an offline evaluation rather than production accuracy. Implemented GitHub Actions CI covering tests, builds, PostgreSQL/Redis integration, and Docker isolation checks.",
-      "features": [
-        "Next.js/NestJS application with a Python ML engine and explainable website-risk analysis.",
-        "Offline temporal evaluation: 36,910 URLs, 96.84% precision, 72.87% F1, and 58.41% recall.",
-        "GitHub Actions CI for tests, builds, PostgreSQL/Redis integration, and Docker isolation checks."
-      ],
-      "link": "https://github.com/faizanrauf6/webshield-ai-fraud-detection",
-      "linkType": "repository"
-    },
-    {
       "title": "MSQuare Market",
-      "category": "Blockchain Architecture & Marketplace",
+      "category": "Blockchain Marketplace",
       "impact": "Wallet services & RBAC",
       "tags": [
         "Next.js",
@@ -422,6 +421,25 @@
         "Docker Compose, Redis, and local DynamoDB initialization with automated table creation and seed-data loading."
       ],
       "link": "https://msq.market/",
+      "linkType": "website"
+    },
+    {
+      "title": "MAWA",
+      "category": "Real-Time Workforce Management",
+      "impact": "Workforce communication",
+      "tags": [
+        "Task Management",
+        "Audio/Video Calling",
+        "Chat",
+        "Multilingual Communication"
+      ],
+      "description": "Designed task-management workflows with multilingual interfaces, audio/video calling, and persistent chat for distributed teams.",
+      "longDescription": "Designed task-management workflows with multilingual interfaces for distributed teams. Integrated audio/video calling and persistent chat within the application.",
+      "features": [
+        "Task-management workflows with multilingual interfaces for distributed teams.",
+        "Integrated audio/video calling and persistent chat within the application."
+      ],
+      "link": "https://mawaapp.com/",
       "linkType": "website"
     },
     {
@@ -528,9 +546,9 @@
         "demo": ""
       }
     ],
-    "publicRepos": 30,
+    "publicRepos": 32,
     "memberSince": "2015",
-    "checkedAt": "2026-10-14T09:48:17.737983+00:00",
+    "checkedAt": "2026-10-14T22:21:41.654755+00:00",
     "source": "https://api.github.com/users/faizanrauf6"
   },
   "npmPackages": {
@@ -605,10 +623,9 @@
   ],
   "certifications": [
     "AWS Certified Cloud Practitioner (CLF-C02) — exam in progress",
-    "Anthropic: Claude 101",
-    "Anthropic: Claude Code 101",
     "Anthropic: Claude Platform 101",
-    "Microsoft Office Expert — Microsoft, Sep 2018"
+    "Anthropic: Claude Code 101",
+    "Anthropic: Claude 101"
   ],
   "education": {
     "degree": "Bachelor of Science in Software Engineering",
@@ -627,15 +644,15 @@
   "languages": [
     {
       "name": "English",
-      "level": ""
+      "level": "Professional"
     },
     {
       "name": "Urdu",
-      "level": "Fluent"
+      "level": "Native"
     },
     {
       "name": "Punjabi",
-      "level": "Fluent"
+      "level": "Native"
     }
   ]
 }

@@ -9,13 +9,14 @@ import Contact from '@/components/Contact';
 import About from '@/components/About';
 import Testimonials from '@/components/Testimonials';
 import Credentials from '@/components/Credentials';
+import portfolioData from '@/data/portfolio.json';
 
 export default function PortfolioPage() {
   const portals = [
     {
       href: '/experience',
       title: 'Work History',
-      desc: '6+ years designing distributed systems, intelligent automation, and cloud-connected platforms.',
+      desc: `${portfolioData.profile.yearsOfExp} years designing distributed systems, AI-powered automation, and cloud infrastructure.`,
       icon: Briefcase,
       color: 'text-blue-500 bg-blue-500/5 border-blue-500/10',
       badge: 'PureLogics · Mahir Company · NielsenIQ'

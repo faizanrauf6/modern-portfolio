@@ -1,6 +1,6 @@
-# Muhammad Faizan Rauf – Solution Architect Portfolio
+# Muhammad Faizan Rauf – Senior Software and AI/ML Engineer Portfolio
 
-Professional portfolio for a **Solution Architect | AI/ML & Cloud Systems Engineer**, covering distributed systems, enterprise RAG, multi-agent automation, and AWS delivery across FinTech, healthcare, e-commerce, and IoT.
+Professional portfolio for a **Senior Software and AI/ML Engineer | Solution Architecture | Cloud Systems**, with **7+ years of experience** covering distributed systems, enterprise RAG, multi-agent automation, and AWS delivery across FinTech, healthcare, e-commerce, and IoT.
 
 Minimal, responsive portfolio built with **Next.js 15**, **Tailwind CSS 4**, and **Motion**.
 
@@ -74,7 +74,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 Edit `data/portfolio.json` to update the profile, skills, experience, projects, metrics, recommendations, and default theme. Blog content lives in `app/blog/` and `components/blog/posts/`; the downloadable résumé lives in `public/`.
 
-The current résumé is `public/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf`. The previous résumé URL redirects to this updated document.
+The current résumé is `public/M_Faizan_Rauf_SSE_AI_ML_Cloud_Engineer_CV.pdf`. Both previous résumé URLs redirect to this updated document.
 
 ## ☁️ Deploy to Vercel
 

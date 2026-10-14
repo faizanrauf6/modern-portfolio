@@ -17,9 +17,9 @@ export default function SkillsBentoPage() {
   const frontendSkills = getSkills('Frontend & Frameworks');
   const databaseSkills = getSkills('Databases');
   const architectureSkills = getSkills('Solution Architecture');
-  const backendSkills = getSkills('Backend & APIs');
+  const backendSkills = [...getSkills('Backend & APIs'), ...getSkills('Integrations & Protocols')];
   const aiMlSkills = getSkills('AI/ML & Data');
-  const toolsSkills = getSkills('Tooling & DevOps');
+  const toolsSkills = getSkills('Cloud & DevOps');
 
   return (
     <main className="min-h-screen bg-zinc-50/50 pt-28 pb-20 px-6 lg:px-24 relative overflow-hidden">
