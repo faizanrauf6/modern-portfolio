@@ -99,6 +99,14 @@ Playwright starts a development server or reuses one running on port 3000. GitHu
 
 The production build is configured to generate Next.js standalone output. Configure the deployment environment, including the public URL, before building for production.
 
+## Deployment
+
+Deploy to Vercel with the Next.js framework preset and the repository root as the project directory. Vercel uses the standard install and build commands automatically.
+
+Set `SITE_URL` to the primary production URL in the project's environment settings. Optional AI and GitHub credentials can be configured there as well. Connect the GitHub repository to enable production deployments from `main` and preview deployments for pull requests.
+
+Local Vercel metadata and environment files are excluded from version control and deployment uploads.
+
 ## Contact
 
 [GitHub](https://github.com/faizanrauf6) · [LinkedIn](https://www.linkedin.com/in/m-faizan-rauf) · [Email](mailto:faizanrauf6@gmail.com)
