@@ -216,20 +216,20 @@ export default function SkillsBentoPage() {
             transition={{ delay: 0.5 }}
             className="md:col-span-3 bg-white rounded-3xl border border-zinc-200/60 shadow-sm relative overflow-hidden group flex flex-col md:flex-row"
           >
-            <div className="p-8 md:w-1/2 flex flex-col justify-center">
+            <div className="p-8 md:w-1/2 bg-zinc-950 text-white flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-zinc-100 rounded-xl">
-                  <Terminal className="w-5 h-5 text-zinc-700" />
+                <div className="p-2 bg-zinc-800 rounded-xl">
+                  <Terminal className="w-5 h-5 text-zinc-200" />
                 </div>
-                <h3 className="text-xl font-bold text-primary">Developer Tooling</h3>
+                <h3 className="text-xl font-bold text-white">Developer Tooling</h3>
               </div>
-              <p className="text-sm text-zinc-500 mb-6 leading-relaxed">
+              <p className="text-sm text-zinc-400 mb-6 leading-relaxed">
                 Equipped with a modern toolchain to ensure reliable testing, continuous integration, and streamlined workflows.
               </p>
               
               <div className="flex flex-wrap gap-2">
                 {toolsSkills.map((skill) => (
-                  <span key={skill} className="px-3 py-1.5 bg-zinc-100/50 border border-zinc-200 rounded-lg text-xs font-mono text-zinc-600">
+                  <span key={skill} className="px-3 py-1.5 bg-zinc-900 border border-zinc-800 rounded-lg text-xs font-mono text-zinc-300">
                     {skill}
                   </span>
                 ))}
@@ -237,29 +237,28 @@ export default function SkillsBentoPage() {
             </div>
             
             {/* Terminal Visual */}
-            <div className="md:w-1/2 bg-zinc-950 p-6 md:p-8 relative flex items-center justify-center">
-              <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.2)_50%)] bg-[size:100%_4px] pointer-events-none z-10" />
-              <div className="w-full max-w-sm bg-[#1e1e1e] rounded-xl border border-zinc-800 shadow-2xl overflow-hidden font-mono text-[10px] md:text-xs">
-                <div className="flex items-center gap-1.5 px-4 py-2.5 bg-[#2d2d2d] border-b border-zinc-800">
+            <div className="md:w-1/2 bg-white p-6 md:p-8 relative flex items-center justify-center">
+              <div className="w-full max-w-sm bg-zinc-50 rounded-xl border border-zinc-200 shadow-lg overflow-hidden font-mono text-[10px] md:text-xs">
+                <div className="flex items-center gap-1.5 px-4 py-2.5 bg-zinc-100 border-b border-zinc-200">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
                   <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-                  <span className="ml-2 text-zinc-500 text-[10px]">Example CI output</span>
+                  <span className="ml-2 text-zinc-600 text-[10px]">Example CI output</span>
                 </div>
-                <div className="p-4 text-zinc-300 space-y-2">
+                <div className="p-4 text-zinc-700 space-y-2">
                   <div className="flex gap-2">
-                    <span className="text-highlight">➜</span>
-                    <span className="text-blue-400">{portfolioData.profile.displayName.toLowerCase()}</span>
+                    <span className="text-emerald-700">➜</span>
+                    <span className="text-blue-600">{portfolioData.profile.displayName.toLowerCase()}</span>
                     <span>npm test</span>
                   </div>
-                  <div className="text-zinc-500 pl-4">PASS src/components/Hero.test.tsx</div>
-                  <div className="text-zinc-500 pl-4">PASS src/hooks/useTheme.test.ts</div>
+                  <div className="text-zinc-600 pl-4">PASS src/components/Hero.test.tsx</div>
+                  <div className="text-zinc-600 pl-4">PASS src/hooks/useTheme.test.ts</div>
                   <div className="flex gap-2 pl-4 pt-2">
-                    <span className="text-highlight font-bold">Test Suites:</span>
+                    <span className="text-emerald-700 font-bold">Test Suites:</span>
                     <span>Example: all suites passed</span>
                   </div>
                   <div className="flex gap-2 pl-4 animate-pulse">
-                    <span className="text-highlight font-bold">Tests:</span>
+                    <span className="text-emerald-700 font-bold">Tests:</span>
                     <span>Example: all tests passed</span>
                   </div>
                 </div>
