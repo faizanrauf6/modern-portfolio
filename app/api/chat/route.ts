@@ -1,29 +1,13 @@
 import OpenAI from 'openai';
-import portfolioData from '@/data/portfolio.json';
+import { buildPortfolioPrompt } from '@/lib/portfolio-chat';
 
 export const runtime = 'nodejs';
 export const maxDuration = 30;
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string };
 
-const FIRST_NAME = portfolioData.profile.displayName;
-
-const SYSTEM_PROMPT = `You are "portfolio-term", the built-in terminal assistant on ${portfolioData.profile.name}'s portfolio website.
-
-Rules:
-- Answer questions about ${FIRST_NAME} — his experience, skills, projects, education, availability, and how to reach him — using ONLY the JSON profile below.
-- Speak about him in the third person ("${FIRST_NAME} has…", "He worked on…").
-- Keep it terminal-friendly: plain text, short lines, no markdown headings, no bold. A few "- " bullets are fine.
-- Be concise. 2–5 sentences for most answers.
-- If a question is unrelated to ${FIRST_NAME}'s work, briefly say so and steer back.
-- Never invent facts, numbers, employers, or dates that are not in the profile.
-- The AWS Cloud Practitioner exam is in progress, not an earned certification.
-- WebShield AI figures are offline temporal evaluation results, not production accuracy.
-- If availability or another detail is missing, say it is not specified and suggest contacting him.
-- Testimonials marked "draft" are suggested wording awaiting the named person's approval. Never present them as received recommendations or that person's actual words.
-
-PROFILE JSON:
-${JSON.stringify(portfolioData)}`;
+const MAX_QUESTION_CHARS = 600;
+const MAX_HISTORY_CHARS = 800;
 
 const textResponse = (body: string, status = 200) =>
   new Response(body, {
@@ -52,7 +36,7 @@ export async function POST(req: Request) {
           typeof (m as ChatMessage).content === 'string' &&
           (m as ChatMessage).content.trim().length > 0,
       )
-      .slice(-10);
+      .slice(-4);
   } catch {
     return textResponse('[error] malformed request body.\n', 400);
   }
@@ -61,17 +45,29 @@ export async function POST(req: Request) {
     return textResponse('[error] no question provided.\n', 400);
   }
 
+  const question = messages.at(-1);
+  if (question?.role !== 'user') {
+    return textResponse('[error] the last message must be a question.\n', 400);
+  }
+  if (question.content.length > MAX_QUESTION_CHARS) {
+    return textResponse(`[error] keep your question within ${MAX_QUESTION_CHARS} characters.\n`, 400);
+  }
+  messages = messages.map(({ role, content }) => ({
+    role, content: content.trim().slice(0, MAX_HISTORY_CHARS),
+  }));
+
   const client = new OpenAI({ apiKey });
-  const model = process.env.OPENAI_MODEL || 'gpt-4o-mini';
+  const model = process.env.OPENAI_MODEL?.trim() || 'gpt-6-luna';
+  const prompt = buildPortfolioPrompt(messages.filter((m) => m.role === 'user').map((m) => m.content).join('\n'));
 
   let completion;
   try {
     completion = await client.chat.completions.create({
       model,
       stream: true,
-      temperature: 0.3,
-      max_tokens: 500,
-      messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
+      max_completion_tokens: 200,
+      ...(model === 'gpt-6-luna' ? { reasoning_effort: 'none' as const } : {}),
+      messages: [{ role: 'system', content: prompt }, ...messages],
     });
   } catch {
     return textResponse(

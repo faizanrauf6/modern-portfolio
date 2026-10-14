@@ -51,10 +51,12 @@ To enable AI answers, add your OpenAI API key to `.env.local`:
 
 ```dotenv
 OPENAI_API_KEY="your_openai_api_key"
-OPENAI_MODEL="gpt-4o-mini"
+OPENAI_MODEL="gpt-6-luna"
 ```
 
 Keep the key server-side; do not prefix it with `NEXT_PUBLIC_`. The portfolio runs without API credentials, and `.env.local` is excluded from Git and deployment uploads.
+
+The terminal defaults to GPT-6 Luna with reasoning disabled. To keep usage small, requests use a compact factual profile, at most four chat messages, and a 200-token reply limit. Questions are limited to 600 characters; recommendation quotes are included only when relevant. Built-in commands such as `skills`, `projects`, and `contact` make no API requests. Set `OPENAI_MODEL` to override the default.
 
 ### 4. Run the Development Server
 

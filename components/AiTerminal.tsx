@@ -182,9 +182,10 @@ export default function AiTerminal() {
       const msgs: ChatMessage[] = [
         ...entriesRef.current
           .filter((e) => e.role === 'user' || e.role === 'assistant')
+          .slice(-3)
           .map((e) => ({
             role: e.role as 'user' | 'assistant',
-            content: e.text,
+            content: e.text.slice(0, 800),
           })),
         { role: 'user', content: question },
       ];
@@ -425,6 +426,7 @@ export default function AiTerminal() {
               </span>
               <input
                 ref={inputRef}
+                maxLength={600}
                 value={input}
                 onChange={(e) => {
                   setInput(e.target.value);
