@@ -154,7 +154,7 @@ export default function Hero() {
               <AnimatePresence mode="wait">
                 {activeTab === 'code' && (
                   <motion.div key="code-tab" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
-                    <pre className="text-emerald-300 whitespace-pre-wrap break-words leading-relaxed">{JSON.stringify({
+                    <pre className="text-accent transition-colors duration-300 whitespace-pre-wrap break-words leading-relaxed">{JSON.stringify({
                       name: profile.name,
                       role: 'Senior Software Engineer',
                       company: 'PureLogics',
