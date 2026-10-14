@@ -1,4 +1,6 @@
-# Muhammad Faizan Rauf – Senior Full Stack & AI/ML Engineer Portfolio
+# Muhammad Faizan Rauf – Solution Architect Portfolio
+
+Professional portfolio for a **Solution Architect | AI/ML & Cloud Systems Engineer**, covering distributed systems, enterprise RAG, multi-agent automation, and AWS delivery across FinTech, healthcare, e-commerce, and IoT.
 
 Minimal, responsive portfolio built with **Next.js 15**, **Tailwind CSS 4**, and **Motion**.
 
@@ -19,7 +21,7 @@ Profile content is managed through **JSON**, with an optional **OpenAI-powered t
 - **Theme Customization** – Five color palettes, three font styles, and theme-aware profile JSON.
 - **JSON-Based Profile** – Update skills, experience, projects, metrics, and recommendations in one file.
 - **GitHub Activity** – Selected repositories and a contribution calendar with a snapshot fallback.
-- **Technical Writing & Playground** – Articles on AI/ML, agents, automation, and backend engineering, plus interactive demos.
+- **Technical Writing & Playground** – Thirteen articles on solution architecture, cloud reliability, AI/ML, agents, automation, and backend engineering, plus interactive demos.
 - **Optional AI Terminal** – OpenAI-powered profile answers, with built-in commands available without an API key.
 
 ## 🚀 Quick Start
@@ -69,6 +71,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ## 🎨 Customize Your Portfolio
 
 Edit `data/portfolio.json` to update the profile, skills, experience, projects, metrics, recommendations, and default theme. Blog content lives in `app/blog/` and `components/blog/posts/`; the downloadable résumé lives in `public/`.
+
+The current résumé is `public/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf`. The previous résumé URL redirects to this updated document.
 
 ## ☁️ Deploy to Vercel
 

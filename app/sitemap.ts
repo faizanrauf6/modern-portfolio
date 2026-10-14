@@ -7,6 +7,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ['', '/experience', '/skills', '/project', '/playground'];
   const posts = [
     '/blog',
+    '/blog/from-requirements-to-solution-architecture',
+    '/blog/designing-reliable-event-driven-integrations',
+    '/blog/building-observable-resilient-aws-systems',
     '/blog/how-mcp-tool-calling-works',
     '/blog/building-reliable-ai-automation',
     '/blog/evaluating-phishing-detection-models',

@@ -16,7 +16,7 @@ export default function SkillsBentoPage() {
 
   const frontendSkills = getSkills('Frontend & Frameworks');
   const databaseSkills = getSkills('Databases');
-  const realTimeSkills = getSkills('Real-Time & Architecture');
+  const architectureSkills = getSkills('Solution Architecture');
   const backendSkills = getSkills('Backend & APIs');
   const aiMlSkills = getSkills('AI/ML & Data');
   const toolsSkills = getSkills('Tooling & DevOps');
@@ -202,10 +202,10 @@ export default function SkillsBentoPage() {
               <div className="p-2 bg-zinc-100 rounded-xl">
                 <Zap className="w-4 h-4 text-primary" />
               </div>
-              <h3 className="text-lg font-bold text-primary">Real-Time & Architecture</h3>
+              <h3 className="text-lg font-bold text-primary">Solution Architecture</h3>
             </div>
             <div className="flex flex-wrap gap-2">
-              {realTimeSkills.map((skill) => <span key={skill} className="px-3 py-1.5 bg-zinc-50 border border-zinc-200 rounded-lg text-xs text-zinc-600">{skill}</span>)}
+              {architectureSkills.map((skill) => <span key={skill} className="px-3 py-1.5 bg-zinc-50 border border-zinc-200 rounded-lg text-xs text-zinc-600">{skill}</span>)}
             </div>
           </motion.div>
 
@@ -221,10 +221,10 @@ export default function SkillsBentoPage() {
                 <div className="p-2 bg-zinc-800 rounded-xl">
                   <Terminal className="w-5 h-5 text-zinc-200" />
                 </div>
-                <h3 className="text-xl font-bold text-white">Developer Tooling</h3>
+                <h3 className="text-xl font-bold text-white">Cloud &amp; DevOps</h3>
               </div>
               <p className="text-sm text-zinc-400 mb-6 leading-relaxed">
-                Equipped with a modern toolchain to ensure reliable testing, continuous integration, and streamlined workflows.
+                AWS infrastructure, containerized environments, observability, and automated delivery pipelines for dependable releases.
               </p>
               
               <div className="flex flex-wrap gap-2">

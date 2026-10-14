@@ -21,6 +21,8 @@ import {
   Workflow,
   ShieldCheck,
   Server,
+  Layers,
+  Cloud,
 } from 'lucide-react';
 
 type Post = {
@@ -37,6 +39,42 @@ type Post = {
 };
 
 const POSTS: Post[] = [
+  {
+    href: '/blog/from-requirements-to-solution-architecture',
+    title: 'From Requirements to Solution Architecture',
+    excerpt: 'Move from a business goal to measurable quality attributes, service boundaries, and architecture decisions you can explain and validate.',
+    icon: Layers,
+    category: 'Solution Architecture',
+    tags: ['System Design', 'C4 Model', 'ADRs', 'Trade-offs'],
+    level: 'Intermediate',
+    readTime: '6 min read',
+    readMinutes: 6,
+    theme: 'from-indigo-500/10 via-blue-500/5 to-violet-500/10 border-indigo-500/20 text-indigo-600',
+  },
+  {
+    href: '/blog/designing-reliable-event-driven-integrations',
+    title: 'Designing Reliable Event-Driven Integrations',
+    excerpt: 'Follow an accepted order through the outbox, broker, and partner API. Make duplicate delivery, tenant boundaries, and uncertain outcomes explicit.',
+    icon: Workflow,
+    category: 'Solution Architecture',
+    tags: ['Event-Driven Systems', 'Outbox', 'Idempotency', 'Multi-Tenancy'],
+    level: 'Advanced',
+    readTime: '7 min read',
+    readMinutes: 7,
+    theme: 'from-amber-500/10 via-orange-500/5 to-yellow-500/10 border-amber-500/20 text-amber-600',
+  },
+  {
+    href: '/blog/building-observable-resilient-aws-systems',
+    title: 'Building Observable, Resilient AWS Systems',
+    excerpt: 'Connect metrics, logs, health checks, deployment controls, and recovery drills to the user operations your cloud application must complete.',
+    icon: Cloud,
+    category: 'Solution Architecture',
+    tags: ['AWS', 'CloudWatch', 'Observability', 'Resilience'],
+    level: 'Intermediate',
+    readTime: '6 min read',
+    readMinutes: 6,
+    theme: 'from-sky-500/10 via-cyan-500/5 to-blue-500/10 border-sky-500/20 text-sky-600',
+  },
   {
     href: '/blog/how-mcp-tool-calling-works',
     title: 'How MCP Tool Calling Works',
@@ -214,9 +252,9 @@ export default function BlogIndexPage() {
             <span className="text-accent">actually work.</span>
           </h1>
           <p className="max-w-lg text-sm md:text-base text-zinc-500 mt-5 leading-relaxed">
-            Systems explained the way I wish someone had explained them to me — animated,
-            step-by-step, no prior knowledge assumed. Click into a diagram and watch the request
-            move.
+            Practical guides to solution architecture, distributed systems, AI, and cloud delivery.
+            Explore the trade-offs, follow a workflow through an interactive diagram, and see how
+            the pieces fit together.
           </p>
 
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5 mt-6 text-[11px] font-mono uppercase tracking-widest text-zinc-400">

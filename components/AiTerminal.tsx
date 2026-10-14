@@ -19,6 +19,9 @@ const { profile, skills, projects } = portfolioData;
 const FIRST = profile.displayName;
 
 const SUGGESTIONS = [
+  `What is ${FIRST}'s approach to solution architecture?`,
+  'What distributed systems and cloud platforms has he designed?',
+  'Tell me about his enterprise RAG and multi-agent experience.',
   `What is ${FIRST}'s experience with React and Next.js?`,
   'Summarize his most impressive project.',
   'Does he have backend and AI experience?',

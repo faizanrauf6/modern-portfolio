@@ -110,9 +110,9 @@ export default function Credentials() {
                   <span className="text-sm font-medium text-primary">
                     {lang.name}
                   </span>
-                  <span className="text-[11px] font-mono uppercase tracking-widest text-text/50 px-2.5 py-1 rounded-full border border-primary/15">
+                  {lang.level && <span className="text-[11px] font-mono uppercase tracking-widest text-text/50 px-2.5 py-1 rounded-full border border-primary/15">
                     {lang.level}
-                  </span>
+                  </span>}
                 </li>
               ))}
             </ul>

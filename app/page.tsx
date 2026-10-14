@@ -15,7 +15,7 @@ export default function PortfolioPage() {
     {
       href: '/experience',
       title: 'Work History',
-      desc: '6+ years building full-stack platforms, intelligent automation, and real-time systems.',
+      desc: '6+ years designing distributed systems, intelligent automation, and cloud-connected platforms.',
       icon: Briefcase,
       color: 'text-blue-500 bg-blue-500/5 border-blue-500/10',
       badge: 'PureLogics · Mahir Company · NielsenIQ'
@@ -23,7 +23,7 @@ export default function PortfolioPage() {
     {
       href: '/skills',
       title: 'Technical Stack',
-      desc: 'Full-stack development, AI/ML, cloud infrastructure, databases, and real-time communication.',
+      desc: 'Solution architecture, enterprise RAG, multi-agent systems, AWS infrastructure, and full-stack engineering.',
       icon: Cpu,
       color: 'text-emerald-500 bg-emerald-500/5 border-emerald-500/10',
       badge: 'Next.js · NestJS · Python'
@@ -31,7 +31,7 @@ export default function PortfolioPage() {
     {
       href: '/project',
       title: 'Major Project',
-      desc: 'Blockchain wallets, e-commerce automation, healthcare integrations, and AI-powered applications.',
+      desc: 'Multi-tenant integrations, blockchain wallets, healthcare data architecture, AI communication, and cloud-connected IoT.',
       icon: FolderGit2,
       color: 'text-purple-500 bg-purple-500/5 border-purple-500/10',
       badge: 'MSQuare · HelloCustom · SpeakShift'
@@ -47,10 +47,10 @@ export default function PortfolioPage() {
     {
       href: '/blog',
       title: 'How Things Work',
-      desc: 'Animated, beginner-friendly breakdowns of RAG, Claude skills, AI harnesses, and CI/CD — real workflows, step by step.',
+      desc: 'Practical guides to solution architecture, event-driven integrations, AWS reliability, RAG, and AI workflows.',
       icon: BookOpen,
       color: 'text-rose-500 bg-rose-500/5 border-rose-500/10',
-      badge: 'RAG · Claude · CI/CD'
+      badge: 'Architecture · AI · AWS'
     }
   ];
 

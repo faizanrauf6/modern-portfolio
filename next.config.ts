@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
   transpilePackages: ['motion'],
   async redirects() {
     return [
+      { source: '/M_Faizan_Rauf_Senior_Full_Stack_AI_ML_DevOps_CV.pdf', destination: '/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf', permanent: true },
       { source: '/blog/rag', destination: '/blog/how-rag-works', permanent: true },
       { source: '/blog/jwt', destination: '/blog/how-claude-skills-and-harnesses-work', permanent: true },
       { source: '/blog/how-jwt-works', destination: '/blog/how-claude-skills-and-harnesses-work', permanent: true },

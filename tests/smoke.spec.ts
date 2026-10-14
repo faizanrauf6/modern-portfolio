@@ -13,6 +13,9 @@ const ROUTES: { path: string; heading: RegExp }[] = [
   { path: '/blog/evaluating-phishing-detection-models', heading: /phishing/i },
   { path: '/blog/serving-python-ml-models-with-nestjs', heading: /NestJS/i },
   { path: '/blog/how-claude-skills-and-harnesses-work', heading: /Claude.*skills/i },
+  { path: '/blog/from-requirements-to-solution-architecture', heading: /requirements.*architecture/i },
+  { path: '/blog/designing-reliable-event-driven-integrations', heading: /event-driven.*integrations/i },
+  { path: '/blog/building-observable-resilient-aws-systems', heading: /observable.*AWS/i },
 ];
 
 for (const { path, heading } of ROUTES) {
@@ -26,6 +29,41 @@ for (const { path, heading } of ROUTES) {
     ).toBeVisible();
   });
 }
+
+test('updated architect identity reaches metadata, the profile dashboard, and the downloadable CV', async ({ page, request }) => {
+  await page.goto('/');
+  await expect(page).toHaveTitle(/Solution Architect.*AI\/ML & Cloud Systems Engineer/);
+  const person = await page.locator('script[type="application/ld+json"]').first().textContent();
+  expect(JSON.parse(person!).jobTitle).toBe('Solution Architect | AI/ML & Cloud Systems Engineer');
+  await expect(page.locator('pre')).toContainText('Solution Architect & AI/ML Engineer');
+  await page.getByRole('button', { name: 'View Résumé', exact: true }).click();
+  const cvPath = '/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf';
+  await expect(page.getByRole('link', { name: 'Download', exact: true })).toHaveAttribute('href', cvPath);
+  await expect(page.locator('iframe')).toHaveAttribute('src', `${cvPath}#view=FitH`);
+  const pdf = await request.get(cvPath);
+  expect(pdf.status()).toBe(200);
+  expect((await pdf.body()).subarray(0, 5).toString()).toBe('%PDF-');
+});
+
+test('architecture articles are discoverable through their category and registered in the sitemap', async ({ page, request }) => {
+  await page.goto('/blog');
+  await expect(page.getByText('13 articles', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: /^Solution Architecture/ }).click();
+  const paths = [
+    '/blog/from-requirements-to-solution-architecture',
+    '/blog/designing-reliable-event-driven-integrations',
+    '/blog/building-observable-resilient-aws-systems',
+  ];
+  for (const path of paths) {
+    // The outgoing featured card stays mounted during its exit animation.
+    await expect(page.locator(`a[href="${path}"]`)).toHaveCount(1);
+    await expect(page.locator(`a[href="${path}"]`)).toBeVisible();
+  }
+  await expect(page.locator('a[href="/blog/how-rag-works"]')).toHaveCount(0);
+  const sitemap = await request.get('/sitemap.xml');
+  const xml = await sitemap.text();
+  for (const path of paths) expect(xml).toContain(path);
+});
 
 test('404 route renders the custom not-found page', async ({ page }) => {
   await page.goto('/this-route-does-not-exist');

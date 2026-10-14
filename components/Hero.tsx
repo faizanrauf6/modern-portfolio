@@ -42,7 +42,7 @@ export default function Hero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-highlight"></span>
             </span>
             <span className="text-[10px] md:text-xs font-mono tracking-widest uppercase text-zinc-500">
-              Full Stack · AI/ML · DevOps
+              {profile.focus.join(' · ')}
             </span>
           </motion.div>
 
@@ -67,7 +67,7 @@ export default function Hero() {
             className="max-w-xl"
           >
             <p className="text-lg lg:text-xl text-zinc-600 leading-relaxed mb-7 font-sans">
-              {profile.title} with <span className="text-primary font-semibold border-b-2 border-highlight/40 pb-0.5">{profile.yearsOfExp} years</span> of experience across e-commerce, healthcare, blockchain, and real-time systems.
+              {profile.title} with <span className="text-primary font-semibold border-b-2 border-highlight/40 pb-0.5">{profile.yearsOfExp} years</span> of experience across {profile.industries}.
             </p>
             
             <div className="flex flex-wrap items-center gap-4">
@@ -156,9 +156,9 @@ export default function Hero() {
                   <motion.div key="code-tab" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
                     <pre className="text-accent transition-colors duration-300 whitespace-pre-wrap break-words leading-relaxed">{JSON.stringify({
                       name: profile.name,
-                      role: 'Senior Software Engineer',
-                      company: 'PureLogics',
-                      focus: ['Full Stack', 'AI/ML', 'DevOps'],
+                      role: portfolioData.experience[0].role,
+                      company: portfolioData.experience[0].company,
+                      focus: profile.focus,
                       stack: profile.coreStack,
                       location: profile.location,
                     }, null, 2)}</pre>

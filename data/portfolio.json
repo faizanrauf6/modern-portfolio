@@ -3,18 +3,18 @@
     "name": "Muhammad Faizan Rauf",
     "displayName": "Faizan",
     "lastName": "Rauf",
-    "title": "Senior Full Stack & AI/ML Engineer | DevOps",
-    "tagline": "Building full-stack platforms, AI-powered automation, and cloud-connected systems",
+    "title": "Solution Architect | AI/ML & Cloud Systems Engineer",
+    "tagline": "Designing distributed systems, intelligent automation, and resilient cloud platforms",
     "coreStack": [
       "Next.js",
       "NestJS",
-      "TypeScript",
       "Python",
-      "RAG",
-      "AI Agents",
-      "Anthropic API",
+      "Enterprise RAG",
+      "Multi-Agent Systems",
       "AWS",
-      "Docker"
+      "Docker",
+      "CI/CD",
+      "Microservices"
     ],
     "stack": [
       "Next.js",
@@ -22,10 +22,12 @@
       "TypeScript",
       "Python",
       "Anthropic API",
-      "RAG",
-      "AI Agents",
+      "Enterprise RAG",
+      "MCP",
+      "Multi-Agent Systems",
       "AWS",
       "Docker",
+      "CI/CD",
       "PostgreSQL",
       "MongoDB",
       "Redis"
@@ -36,9 +38,9 @@
     "github": "https://github.com/faizanrauf6",
     "linkedin": "https://www.linkedin.com/in/m-faizan-rauf",
     "npm": "",
-    "resumeUrl": "/M_Faizan_Rauf_Senior_Full_Stack_AI_ML_DevOps_CV.pdf",
+    "resumeUrl": "/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf",
     "location": "Lahore, Pakistan",
-    "summary": "Senior Full Stack & AI/ML Engineer with 6+ years of software development experience across e-commerce, healthcare, blockchain, and real-time systems. Combines Next.js, NestJS, Python, C#, and data architecture to deliver web platforms and intelligent automation. Hands-on experience spans Anthropic API integration, RAG, MCP-connected agents, machine learning, AWS deployment, Docker, and GitHub Actions CI. Translates business requirements into maintainable applications, with project work covering marketplace integrations, FHIR-based patient data access, and role-based administration.",
+    "summary": "Solution Architect and AI/ML & Cloud Systems Engineer with 6+ years of experience designing distributed systems, intelligent automation pipelines, and cloud infrastructure across FinTech, healthcare, e-commerce, and IoT. Translates business goals into technical architecture, with hands-on work spanning API-first design, event-driven microservices, Anthropic APIs, enterprise RAG, and multi-agent orchestration. Builds application backends with Next.js, NestJS, and Python, and supports end-to-end delivery through AWS, Docker, and CI/CD. Project experience includes multi-tenant marketplace integrations, read-only FHIR data access, and real-time cloud-to-device communication.",
     "yearsOfExp": "6+",
     "stats": [
       {
@@ -93,7 +95,13 @@
         "label": "URLs evaluated",
         "desc": "WebShield AI offline temporal evaluation"
       }
-    ]
+    ],
+    "focus": [
+      "Solution Architecture",
+      "AI/ML",
+      "Cloud Systems"
+    ],
+    "industries": "FinTech, healthcare, e-commerce, and IoT"
   },
   "theme": {
     "primary": "#18181b",
@@ -109,30 +117,23 @@
       "items": [
         "Next.js",
         "React.js",
-        "HTML5",
-        "CSS3",
-        "Tailwind CSS",
-        "Material UI",
-        "Bootstrap",
+        "TypeScript",
         "JavaScript",
-        "TypeScript"
+        "Tailwind CSS",
+        "Material UI"
       ]
     },
     {
-      "category": "Real-Time & Architecture",
+      "category": "Solution Architecture",
       "items": [
-        "Socket.IO",
-        "WebSockets",
-        "Pub/Sub Messaging",
+        "Distributed Systems Design",
+        "Microservices",
         "Event-Driven Workflows",
-        "Background Jobs",
-        "Solution Architecture",
-        "Microservices Architecture",
-        "Technical Leadership",
-        "Code Reviews",
-        "Communication",
-        "Cross-Functional Collaboration",
-        "Problem Solving"
+        "API-First Design",
+        "REST APIs",
+        "GraphQL APIs",
+        "System Observability",
+        "Role-Based Access Control (RBAC)"
       ]
     },
     {
@@ -142,12 +143,14 @@
         "Node.js",
         "Express.js",
         "Python",
+        "FastAPI",
         "Django",
-        "Flask APIs",
+        "Flask",
         "C#",
         "ASP.NET",
-        "REST APIs",
-        "GraphQL APIs"
+        "WebSockets",
+        "Socket.IO",
+        "Pub/Sub Messaging"
       ]
     },
     {
@@ -155,18 +158,14 @@
       "items": [
         "Anthropic API",
         "Model Context Protocol (MCP)",
-        "LLM API Integration",
         "Retrieval-Augmented Generation (RAG)",
-        "AI Agents",
-        "Generative AI",
-        "AI-Powered Automation",
-        "Claude Code",
-        "Machine Learning",
-        "Deep Learning",
+        "Multi-Agent Systems",
+        "Context Window Optimization",
+        "Vector Databases",
         "Scikit-Learn",
         "NumPy",
         "Pandas",
-        "Data Processing"
+        "Data Engineering"
       ]
     },
     {
@@ -175,112 +174,111 @@
         "Amazon Web Services (AWS)",
         "Amazon EC2",
         "Amazon S3",
+        "Amazon CloudWatch",
         "Docker",
         "Docker Compose",
         "GitHub Actions",
         "CI/CD",
-        "Apache",
-        "Cloud Deployment",
-        "Release Support",
-        "Git / GitHub"
+        "Infrastructure Automation",
+        "Deployment Orchestration",
+        "Linux Server Administration"
       ]
     },
     {
       "category": "Databases",
       "items": [
+        "PostgreSQL",
         "MongoDB",
         "MySQL",
-        "PostgreSQL",
         "Amazon DynamoDB",
-        "Redis",
-        "SQLite",
-        "Firebase"
+        "Redis Caching",
+        "SQLite"
       ]
     }
   ],
   "experience": [
     {
       "company": "PureLogics",
-      "role": "Senior Software Engineer",
+      "role": "Solution Architect & AI/ML Engineer",
       "period": "Jan 2023 – Present",
       "location": "Lahore, Pakistan",
       "description": [
-        "Develop end-to-end web features with Next.js, NestJS, TypeScript, and REST APIs, connecting interfaces, microservices, and data storage.",
-        "Implement Anthropic API integrations, RAG-based retrieval, and MCP-connected agent workflows for application automation.",
-        "Build Python ML and data-processing workflows with NumPy and Pandas for AI-enabled features.",
-        "Implement Socket.IO communication and Modbus integrations to connect application workflows with commercial HVAC equipment.",
-        "Support AWS deployment and Docker environment configuration; troubleshoot releases and optimize application performance."
+        "Design and deliver distributed application features with Next.js, NestJS, TypeScript, and event-driven microservices, separating service responsibilities and data access.",
+        "Build AI orchestration workflows with Anthropic APIs, RAG pipelines, and MCP-connected agents for cross-platform operational automation.",
+        "Build Python data-processing and ML pipelines with NumPy and Pandas for AI-enabled application features.",
+        "Integrate Socket.IO and Modbus to connect cloud applications with commercial HVAC equipment.",
+        "Configure AWS deployments and Docker environments; troubleshoot releases and optimize application performance."
       ]
     },
     {
       "company": "Mahir Company",
-      "role": "MERN Stack Developer",
+      "role": "Lead Full Stack Engineer & DevOps",
       "period": "Feb 2022 – Jan 2023",
       "location": "Lahore, Pakistan",
       "description": [
-        "Built the company website, admin panel, and MongoDB-backed APIs; collaborated with product and design teams on features and user journeys.",
-        "Supported AI/ML-enabled features through data preparation, API integration, and workflow automation.",
-        "Collaborated with the server team on AWS deployments, Docker environments, and web/API release support."
+        "Led architecture and development of the web platform, administrative console, and MongoDB-backed APIs with product and design teams.",
+        "Built data-preparation workflows and API integrations supporting AI/ML features and operational automation.",
+        "Collaborated with infrastructure teams on AWS services, Docker environments, and release pipelines for web and API services."
       ]
     },
     {
       "company": "NielsenIQ",
-      "role": "SUD Executive",
+      "role": "Data Automation Systems Executive",
       "period": "Sep 2020 – Feb 2022",
       "location": "Lahore, Pakistan",
       "description": [
-        "Wrote data-processing and visualization scripts for client software, automating repetitive data-handling workflows.",
-        "Prepared and validated structured datasets for analytics and AI/ML workflows, focusing on data quality, repeatable transformations, and consistent reporting."
+        "Designed data-processing and visualization scripts for analytical software; automated ingestion and repetitive data-handling workflows."
       ]
     },
     {
       "company": "The A Web Technologies",
-      "role": "Software Engineer",
+      "role": "Senior Software Engineer",
       "period": "May 2019 – Feb 2020",
       "location": "Islamabad, Pakistan",
       "description": [
-        "Developed web applications and MongoDB-backed services; wrote unit tests, fixed defects, and improved performance and UI/UX.",
-        "Supported application deployments, environment configuration, and release troubleshooting for web applications and backend services."
+        "Developed web services and MongoDB-backed data layers; implemented unit tests, resolved defects, and improved application performance."
       ]
     },
     {
       "company": "Creativeminds",
-      "role": "Mobile App Developer",
+      "role": "Mobile Application & Systems Engineer",
       "period": "Feb 2019 – May 2019",
       "location": "Islamabad, Pakistan",
       "description": [
-        "Built Java and Kotlin mobile applications integrated with backend services and MongoDB data storage."
+        "Designed Java and Kotlin mobile applications, modular client components, and backend integrations with MongoDB-based storage."
       ]
     }
   ],
   "projects": [
     {
       "title": "MSQuare Market",
-      "category": "Blockchain Wallet & Marketplace",
+      "category": "Blockchain Architecture & Marketplace",
       "impact": "Wallet services & RBAC",
       "tags": [
         "Next.js",
+        "RBAC",
         "Redis",
-        "AWS",
-        "DynamoDB",
         "Docker Compose",
-        "Swagger"
+        "DynamoDB",
+        "Wallet Services"
       ],
-      "description": "Contributed to on-chain and off-chain wallet services for crypto-asset acquisition, management, and use across connected platforms.",
-      "longDescription": "Contributed to on-chain and off-chain wallet services for crypto-asset acquisition, management, and use across connected platforms.",
+      "description": "Designed on-chain and off-chain wallet-service workflows for crypto-asset acquisition and management across connected platforms.",
+      "longDescription": "Designed on-chain and off-chain wallet-service workflows for crypto-asset acquisition and management across connected platforms. Built a Next.js admin portal with role-based access control for requests, transactions, platforms, and users. Configured Docker Compose, Redis, and local DynamoDB initialization with automated table creation and seed-data loading.",
       "features": [
         "Next.js admin portal with role-based access control for requests, transactions, platforms, and users.",
-        "Redis, AWS, and Swagger-documented APIs.",
-        "Docker Compose with automated DynamoDB table creation and seed-data loading."
+        "On-chain and off-chain wallet-service workflows for crypto-asset acquisition and management.",
+        "Docker Compose, Redis, and local DynamoDB initialization with automated table creation and seed-data loading."
       ],
       "link": "https://msq.market/",
       "linkType": "website"
     },
     {
       "title": "HelloCustom",
-      "category": "E-Commerce Automation & Integrations",
-      "impact": "5 partner integrations",
+      "category": "E-Commerce Integration Platform",
+      "impact": "5 partner APIs",
       "tags": [
+        "Multi-Tenant Architecture",
+        "Event-Driven Workflows",
         "Etsy",
         "Amazon",
         "Printify",
@@ -288,32 +286,33 @@
         "ICP",
         "Shopify"
       ],
-      "description": "Contributed to personalization and order-fulfillment automation across five partner integrations: Etsy, Amazon, Printify, Printful, and ICP.",
-      "longDescription": "Contributed to personalization and order-fulfillment automation across five partner integrations: Etsy, Amazon, Printify, Printful, and ICP.",
+      "description": "Designed multi-tenant, event-driven workflows for product personalization and order fulfillment across marketplace services.",
+      "longDescription": "Designed a multi-tenant, event-driven integration platform for product personalization and automated order fulfillment. Connected Etsy, Amazon, Printify, Printful, and ICP through five partner APIs, with additional Shopify integration support. Implemented transaction handling and retry mechanisms for automated order-processing workflows.",
       "features": [
-        "Personalization and order-fulfillment automation across five partners.",
-        "Supported Shopify integration."
+        "Connected five partner APIs: Etsy, Amazon, Printify, Printful, and ICP; supported Shopify integration.",
+        "Designed multi-tenant workflows for product personalization and automated order fulfillment.",
+        "Implemented transaction handling and retry mechanisms for automated order processing."
       ],
       "link": "https://hellocustom.io/",
       "linkType": "website"
     },
     {
       "title": "SpeakShift",
-      "category": "AI Transcription & Multilingual Communication",
+      "category": "AI-Powered Video Communication Platform",
       "impact": "Live multilingual communication",
       "tags": [
         "AI Transcription",
-        "Translation",
+        "Multilingual Translation",
         "Live Captions",
-        "Video Communication",
+        "WebSockets",
         "Group Chat"
       ],
-      "description": "Worked on video communication with AI-powered transcription, multilingual translation, live captions, and group chat.",
-      "longDescription": "Worked on video communication with AI-powered transcription, multilingual translation, live captions, and group chat.",
+      "description": "Designed real-time video communication workflows with AI transcription, live captions, multilingual translation, and WebSocket-based group chat.",
+      "longDescription": "Designed real-time video communication workflows bringing together AI-powered transcription, live captions, and multilingual translation. Built data routing and WebSocket-based group chat to coordinate communication across connected clients.",
       "features": [
-        "AI-powered transcription and multilingual translation.",
-        "Live captions for video communication.",
-        "Group chat workflows."
+        "Real-time video workflows with AI transcription, live captions, and multilingual translation.",
+        "Data routing across connected clients.",
+        "WebSocket-based group chat coordinating communication within the platform."
       ],
       "link": "https://speakshift.ai/",
       "linkType": "website"
@@ -343,7 +342,7 @@
     },
     {
       "title": "SES DLC / Save Energy Systems",
-      "category": "Cloud-Connected HVAC / IoT",
+      "category": "Cloud-Connected IoT Platform",
       "impact": "Cloud-connected HVAC",
       "tags": [
         "AWS EC2",
@@ -353,12 +352,12 @@
         "Modbus",
         "Serial-Port Communication"
       ],
-      "description": "Developed AWS EC2-hosted HVAC application services using MySQL, JWT, and Apache; integrated Modbus and serial-port communication.",
-      "longDescription": "Developed AWS EC2-hosted HVAC application services using MySQL, JWT, and Apache; integrated Modbus and serial-port communication.",
+      "description": "Built AWS EC2-hosted IoT services connecting commercial HVAC equipment to cloud workflows through Modbus and serial-port communication.",
+      "longDescription": "Built cloud-connected IoT application services hosted on AWS EC2, using MySQL for persistence, JWT for authentication, and Apache for hosting. Integrated Modbus and serial-port communication to connect commercial HVAC equipment with cloud application workflows.",
       "features": [
-        "AWS EC2-hosted HVAC application services.",
-        "MySQL storage, JWT authentication, and Apache hosting.",
-        "Modbus and serial-port communication integrations."
+        "AWS EC2-hosted application services for cloud-connected HVAC equipment.",
+        "MySQL persistence, JWT authentication, and Apache hosting.",
+        "Modbus and serial-port communication connecting equipment with cloud application workflows."
       ],
       "link": "https://saveenergysystems.com",
       "linkType": "website"
@@ -373,20 +372,20 @@
         "Chat",
         "Multilingual Communication"
       ],
-      "description": "Contributed to task management, task history, audio/video calling, chat, and multilingual workforce communication.",
-      "longDescription": "Contributed to task management, task history, audio/video calling, chat, and multilingual workforce communication.",
+      "description": "Designed task-management and task-history workflows with multilingual interfaces, audio/video calling, and persistent chat for distributed workforce collaboration.",
+      "longDescription": "Designed task-management and task-history workflows with multilingual interfaces for distributed workforce collaboration. Integrated audio/video calling and persistent chat to connect teams within the application.",
       "features": [
-        "Task management and task history workflows.",
-        "Audio/video calling and chat.",
-        "Multilingual workforce communication."
+        "Task-management and task-history workflows for distributed teams.",
+        "Multilingual interfaces for workforce collaboration.",
+        "Integrated audio/video calling and persistent chat."
       ],
       "link": "https://mawaapp.com/",
       "linkType": "website"
     },
     {
       "title": "Mahir Company",
-      "category": "Full-Stack Web Platform",
-      "impact": "Website, admin & APIs",
+      "category": "Consumer Platform & Core API Infrastructure",
+      "impact": "Platform architecture & APIs",
       "tags": [
         "React.js",
         "Node.js",
@@ -395,20 +394,20 @@
         "AWS",
         "Docker"
       ],
-      "description": "Company website, admin panel, and MongoDB-backed APIs built in collaboration with product and design teams.",
-      "longDescription": "Built Mahir Company’s website, admin panel, and MongoDB-backed APIs as a MERN Stack Developer. Supported AI/ML-enabled features through data preparation, API integration, and workflow automation, and collaborated with the server team on AWS deployments and Docker environments.",
+      "description": "Architected the consumer web platform, admin panel, and scalable MongoDB-backed APIs, streamlining data flows across product layers.",
+      "longDescription": "Architected the consumer web platform, administrative console, and scalable MongoDB-backed APIs, coordinating data flows across product layers. Automated data preparation and API integrations supporting AI/ML workflows. Optimized Docker environments and AWS deployment pipelines for continuous web and API releases.",
       "features": [
-        "Company website and admin-panel development.",
-        "MongoDB-backed APIs and cross-functional feature delivery.",
-        "Data preparation, API integration, and workflow automation.",
-        "AWS deployment, Docker environments, and release support."
+        "Consumer web platform and administrative console architecture.",
+        "Scalable MongoDB-backed APIs and coordinated data flows across product layers.",
+        "Automated data preparation and API integration for AI/ML workflows.",
+        "Optimized Docker environments and AWS deployment pipelines for continuous releases."
       ],
       "link": "https://mahircompany.com/",
       "linkType": "website"
     },
     {
       "title": "NurseBrain",
-      "category": "Healthcare Data Integration",
+      "category": "Healthcare Data Integration Architecture",
       "impact": "2 EHR integrations",
       "tags": [
         "FHIR",
@@ -416,18 +415,18 @@
         "Cerner",
         "Real-Time Integration"
       ],
-      "description": "Implemented FHIR-based patient data access across Epic and Cerner, reducing manual entry through real-time, read-only integration.",
-      "longDescription": "Implemented FHIR-based patient data access across Epic and Cerner, reducing manual entry through real-time, read-only integration.",
+      "description": "Designed read-only FHIR integrations with Epic and Cerner for real-time patient data access, reducing manual entry.",
+      "longDescription": "Designed a read-only healthcare data integration architecture using FHIR to connect Epic and Cerner. Enabled real-time access to patient data across two EHR systems while reducing manual data entry.",
       "features": [
-        "FHIR-based access to patient data across two EHR systems.",
-        "Real-time, read-only integration to reduce manual data entry."
+        "Read-only FHIR architecture connecting two EHR systems: Epic and Cerner.",
+        "Real-time patient data access to reduce manual entry."
       ],
       "link": "",
       "linkType": "website"
     },
     {
       "title": "WebShield AI",
-      "category": "Personal Project / Machine Learning",
+      "category": "ML-Based Phishing Analysis",
       "impact": "72.87% offline F1",
       "tags": [
         "Next.js",
@@ -438,12 +437,12 @@
         "Redis",
         "GitHub Actions"
       ],
-      "description": "A phishing-analysis application with Python ML. Offline temporal evaluation on 36,910 URLs reported 72.87% F1, 96.84% precision, and 58.41% recall.",
-      "longDescription": "A phishing-analysis application with Python ML. Offline temporal evaluation on 36,910 URLs reported 72.87% F1, 96.84% precision, and 58.41% recall.",
+      "description": "Built a Next.js/NestJS application with a Python ML engine and explainable website-risk analysis. Offline temporal evaluation on 36,910 URLs reported 96.84% precision, 72.87% F1, and 58.41% recall.",
+      "longDescription": "Built a Next.js/NestJS application with a Python ML engine and explainable website-risk analysis. Offline temporal evaluation on 36,910 URLs reported 96.84% precision, 72.87% F1, and 58.41% recall; these figures describe an offline evaluation rather than production accuracy. Implemented GitHub Actions CI covering tests, builds, PostgreSQL/Redis integration, and Docker isolation checks.",
       "features": [
-        "Next.js/NestJS application backed by Python machine learning.",
-        "Offline temporal evaluation: 36,910 URLs, 72.87% F1, 96.84% precision, and 58.41% recall.",
-        "Push/PR CI pipelines run tests, builds, browser checks, PostgreSQL/Redis integration checks, and Docker isolation validation."
+        "Next.js/NestJS application with a Python ML engine and explainable website-risk analysis.",
+        "Offline temporal evaluation: 36,910 URLs, 96.84% precision, 72.87% F1, and 58.41% recall.",
+        "GitHub Actions CI for tests, builds, PostgreSQL/Redis integration, and Docker isolation checks."
       ],
       "link": "https://github.com/faizanrauf6/webshield-ai-fraud-detection",
       "linkType": "repository"
@@ -616,7 +615,7 @@
     "institution": "COMSATS University Islamabad",
     "period": "Feb 2015 – Mar 2019",
     "gpa": "3.31",
-    "project": "Wedding automation system incorporating JavaScript, augmented reality, and virtual reality."
+    "project": "Wedding automation system using JavaScript, augmented reality (AR), and virtual reality (VR)."
   },
   "awards": [
     {
@@ -628,7 +627,7 @@
   "languages": [
     {
       "name": "English",
-      "level": "Fluent"
+      "level": ""
     },
     {
       "name": "Urdu",

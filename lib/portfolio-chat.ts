@@ -14,6 +14,7 @@ const compactProfile = {
     email: profile.email,
     phone: profile.phone,
     website: profile.website,
+    resumeUrl: profile.resumeUrl,
     github: profile.github,
     linkedin: profile.linkedin,
   },
