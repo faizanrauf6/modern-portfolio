@@ -251,28 +251,6 @@
   ],
   "projects": [
     {
-      "title": "MSQuare Market",
-      "category": "Blockchain Architecture & Marketplace",
-      "impact": "Wallet services & RBAC",
-      "tags": [
-        "Next.js",
-        "RBAC",
-        "Redis",
-        "Docker Compose",
-        "DynamoDB",
-        "Wallet Services"
-      ],
-      "description": "Designed on-chain and off-chain wallet-service workflows for crypto-asset acquisition and management across connected platforms.",
-      "longDescription": "Designed on-chain and off-chain wallet-service workflows for crypto-asset acquisition and management across connected platforms. Built a Next.js admin portal with role-based access control for requests, transactions, platforms, and users. Configured Docker Compose, Redis, and local DynamoDB initialization with automated table creation and seed-data loading.",
-      "features": [
-        "Next.js admin portal with role-based access control for requests, transactions, platforms, and users.",
-        "On-chain and off-chain wallet-service workflows for crypto-asset acquisition and management.",
-        "Docker Compose, Redis, and local DynamoDB initialization with automated table creation and seed-data loading."
-      ],
-      "link": "https://msq.market/",
-      "linkType": "website"
-    },
-    {
       "title": "HelloCustom",
       "category": "E-Commerce Integration Platform",
       "impact": "5 partner APIs",
@@ -297,6 +275,25 @@
       "linkType": "website"
     },
     {
+      "title": "NurseBrain",
+      "category": "Healthcare Data Integration Architecture",
+      "impact": "2 EHR integrations",
+      "tags": [
+        "FHIR",
+        "Epic",
+        "Cerner",
+        "Real-Time Integration"
+      ],
+      "description": "Designed read-only FHIR integrations with Epic and Cerner for real-time patient data access, reducing manual entry.",
+      "longDescription": "Designed a read-only healthcare data integration architecture using FHIR to connect Epic and Cerner. Enabled real-time access to patient data across two EHR systems while reducing manual data entry.",
+      "features": [
+        "Read-only FHIR architecture connecting two EHR systems: Epic and Cerner.",
+        "Real-time patient data access to reduce manual entry."
+      ],
+      "link": "",
+      "linkType": "website"
+    },
+    {
       "title": "SpeakShift",
       "category": "AI-Powered Video Communication Platform",
       "impact": "Live multilingual communication",
@@ -315,29 +312,6 @@
         "WebSocket-based group chat coordinating communication within the platform."
       ],
       "link": "https://speakshift.ai/",
-      "linkType": "website"
-    },
-    {
-      "title": "AI Agent Workflows at PureLogics",
-      "category": "AI / Developer Tooling",
-      "impact": "Multi-Agent Delivery",
-      "tags": [
-        "Claude API",
-        "MCP",
-        "Claude Code",
-        "AI Agents",
-        "RAG",
-        "Node.js"
-      ],
-      "description": "Co-built production LLM features and multi-agent delivery workflows with the Anthropic Claude API, MCP, and RAG.",
-      "longDescription": "Co-built Anthropic Claude API and Model Context Protocol (MCP) integrations in Node.js/React products to support LLM-powered features backed by RAG. Collaborated on Claude Code subagent workflows that split complex features across specialized research, implementation, and review agents, with coordinated handoffs for day-to-day engineering delivery.",
-      "features": [
-        "Anthropic Claude API + MCP tooling integrated into production Node.js/React apps",
-        "RAG pipeline powering LLM-driven features on real product data",
-        "Claude Code subagent orchestration: specialized agents collaborate and hand off research, implementation, and review",
-        "Rolled the workflow out to the engineering team as part of day-to-day delivery"
-      ],
-      "link": "",
       "linkType": "website"
     },
     {
@@ -360,26 +334,6 @@
         "Modbus and serial-port communication connecting equipment with cloud application workflows."
       ],
       "link": "https://saveenergysystems.com",
-      "linkType": "website"
-    },
-    {
-      "title": "MAWA",
-      "category": "Real-Time Workforce Management",
-      "impact": "Workforce communication",
-      "tags": [
-        "Task Management",
-        "Audio/Video Calling",
-        "Chat",
-        "Multilingual Communication"
-      ],
-      "description": "Designed task-management and task-history workflows with multilingual interfaces, audio/video calling, and persistent chat for distributed workforce collaboration.",
-      "longDescription": "Designed task-management and task-history workflows with multilingual interfaces for distributed workforce collaboration. Integrated audio/video calling and persistent chat to connect teams within the application.",
-      "features": [
-        "Task-management and task-history workflows for distributed teams.",
-        "Multilingual interfaces for workforce collaboration.",
-        "Integrated audio/video calling and persistent chat."
-      ],
-      "link": "https://mawaapp.com/",
       "linkType": "website"
     },
     {
@@ -406,22 +360,23 @@
       "linkType": "website"
     },
     {
-      "title": "NurseBrain",
-      "category": "Healthcare Data Integration Architecture",
-      "impact": "2 EHR integrations",
+      "title": "MAWA",
+      "category": "Real-Time Workforce Management",
+      "impact": "Workforce communication",
       "tags": [
-        "FHIR",
-        "Epic",
-        "Cerner",
-        "Real-Time Integration"
+        "Task Management",
+        "Audio/Video Calling",
+        "Chat",
+        "Multilingual Communication"
       ],
-      "description": "Designed read-only FHIR integrations with Epic and Cerner for real-time patient data access, reducing manual entry.",
-      "longDescription": "Designed a read-only healthcare data integration architecture using FHIR to connect Epic and Cerner. Enabled real-time access to patient data across two EHR systems while reducing manual data entry.",
+      "description": "Designed task-management and task-history workflows with multilingual interfaces, audio/video calling, and persistent chat for distributed workforce collaboration.",
+      "longDescription": "Designed task-management and task-history workflows with multilingual interfaces for distributed workforce collaboration. Integrated audio/video calling and persistent chat to connect teams within the application.",
       "features": [
-        "Read-only FHIR architecture connecting two EHR systems: Epic and Cerner.",
-        "Real-time patient data access to reduce manual entry."
+        "Task-management and task-history workflows for distributed teams.",
+        "Multilingual interfaces for workforce collaboration.",
+        "Integrated audio/video calling and persistent chat."
       ],
-      "link": "",
+      "link": "https://mawaapp.com/",
       "linkType": "website"
     },
     {
@@ -446,6 +401,51 @@
       ],
       "link": "https://github.com/faizanrauf6/webshield-ai-fraud-detection",
       "linkType": "repository"
+    },
+    {
+      "title": "MSQuare Market",
+      "category": "Blockchain Architecture & Marketplace",
+      "impact": "Wallet services & RBAC",
+      "tags": [
+        "Next.js",
+        "RBAC",
+        "Redis",
+        "Docker Compose",
+        "DynamoDB",
+        "Wallet Services"
+      ],
+      "description": "Designed on-chain and off-chain wallet-service workflows for crypto-asset acquisition and management across connected platforms.",
+      "longDescription": "Designed on-chain and off-chain wallet-service workflows for crypto-asset acquisition and management across connected platforms. Built a Next.js admin portal with role-based access control for requests, transactions, platforms, and users. Configured Docker Compose, Redis, and local DynamoDB initialization with automated table creation and seed-data loading.",
+      "features": [
+        "Next.js admin portal with role-based access control for requests, transactions, platforms, and users.",
+        "On-chain and off-chain wallet-service workflows for crypto-asset acquisition and management.",
+        "Docker Compose, Redis, and local DynamoDB initialization with automated table creation and seed-data loading."
+      ],
+      "link": "https://msq.market/",
+      "linkType": "website"
+    },
+    {
+      "title": "AI Agent Workflows at PureLogics",
+      "category": "AI / Developer Tooling",
+      "impact": "Multi-Agent Delivery",
+      "tags": [
+        "Claude API",
+        "MCP",
+        "Claude Code",
+        "AI Agents",
+        "RAG",
+        "Node.js"
+      ],
+      "description": "Co-built production LLM features and multi-agent delivery workflows with the Anthropic Claude API, MCP, and RAG.",
+      "longDescription": "Co-built Anthropic Claude API and Model Context Protocol (MCP) integrations in Node.js/React products to support LLM-powered features backed by RAG. Collaborated on Claude Code subagent workflows that split complex features across specialized research, implementation, and review agents, with coordinated handoffs for day-to-day engineering delivery.",
+      "features": [
+        "Anthropic Claude API + MCP tooling integrated into production Node.js/React apps",
+        "RAG pipeline powering LLM-driven features on real product data",
+        "Claude Code subagent orchestration: specialized agents collaborate and hand off research, implementation, and review",
+        "Rolled the workflow out to the engineering team as part of day-to-day delivery"
+      ],
+      "link": "",
+      "linkType": "website"
     },
     {
       "title": "LinkedIn Job Agent",
