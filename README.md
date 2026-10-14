@@ -1,36 +1,91 @@
 # Muhammad Faizan Rauf — Portfolio
 
-Personal portfolio for a Senior Full Stack & AI/ML Engineer with DevOps experience. Built with Next.js 15, React 19, TypeScript, Tailwind CSS 4, and Motion.
+Personal portfolio showcasing full-stack engineering, AI/ML, automation, and DevOps experience across commercial products and open-source projects.
 
-## Run locally
+Built with Next.js, React, TypeScript, Tailwind CSS, and Motion.
+
+## Features
+
+- Professional profile, experience timeline, education, and recommendations.
+- Project case studies with technology stacks, contributions, and website or repository links.
+- Selected GitHub repositories and a contribution calendar with daily refreshes and a snapshot fallback.
+- Technical articles on AI agents, Claude skills, machine learning, backend systems, and delivery workflows.
+- Interactive playground for responsive layouts, themes, animations, accessibility, and performance.
+- Optional AI terminal for questions about the portfolio, with built-in commands available offline.
+- Responsive navigation, keyboard command palette, and customizable colors and typography.
+
+## Technology Stack
+
+| Area | Technologies |
+| --- | --- |
+| Framework | Next.js 15 App Router, React 19 |
+| Language | TypeScript |
+| Styling | Tailwind CSS 4, CSS custom properties |
+| Animation and icons | Motion, Lucide React |
+| Integrations | OpenAI SDK, GitHub GraphQL and public contribution calendar |
+| Analytics | Vercel Analytics, Speed Insights |
+| Quality checks | ESLint, TypeScript, Playwright, GitHub Actions |
+
+## Getting Started
+
+Use Node.js 20 or later and npm.
 
 ```bash
+git clone https://github.com/faizanrauf6/modern-portfolio.git
+cd modern-portfolio
 npm ci
 npm run dev
 ```
 
-Open http://localhost:3000.
+Open [localhost:3000](http://localhost:3000).
 
-## Content
+## Configuration
 
-`data/portfolio.json` contains the profile, skills, work experience, projects, open-source tools, education, professional development, award, languages, and theme. Content is based on the supplied CV and owner-provided portfolio details. The downloadable CV is in `public/` at the path specified by `profile.resumeUrl`.
+Copy the environment template to configure optional integrations:
 
-The AWS Cloud Practitioner exam is in progress. WebShield AI metrics describe offline temporal evaluation, not production accuracy. The recommendations section contains six testimonials: two supplied LinkedIn quotations and four owner-confirmed approved testimonials from Stephen Chin, Usman Altaf, Nasir Mehmood, and Khizar Rehman. npm packages remain hidden. GitHub cards use verified repository URLs and metadata, with six selected repositories.
+```bash
+cp .env.example .env.local
+```
 
-The public website field is intentionally empty. Add the final URL to `profile.website` or set `SITE_URL` when the domain is ready. Until then, the app supports localhost previews, omits a public canonical URL, and disables search indexing and sitemap entries.
+| Variable | Purpose |
+| --- | --- |
+| `SITE_URL` | Public portfolio URL used for canonical links, structured data, and the sitemap. |
+| `OPENAI_API_KEY` | Server-side key that enables AI-generated terminal answers. |
+| `OPENAI_MODEL` | Optional model override for the AI terminal. |
+| `GITHUB_TOKEN` | Optional server-side token for GitHub GraphQL contribution requests. |
 
-## Optional integrations
+The portfolio runs without API credentials. The GitHub calendar uses public data when no token is configured and retains a dated snapshot if GitHub is unavailable. The terminal's built-in commands work independently of AI access.
 
-Copy `.env.example` to `.env.local` and configure the integrations you want:
+Set `SITE_URL` or `profile.website` in `data/portfolio.json` when the public domain is available. Without a public URL, search indexing and sitemap entries remain disabled. Keep API credentials server-side; `.env.local` is excluded from version control.
 
-- `OPENAI_API_KEY`: server-only key for the AI terminal. Built-in terminal commands work without it.
-- `OPENAI_MODEL`: optional model override.
-- `GITHUB_TOKEN`: optional server-only token for GraphQL contribution refreshes. Without a token, the app reads the public GitHub calendar. A dated, verified snapshot in `data/github-contributions.json` remains available when GitHub cannot be reached.
-- `SITE_URL`: public deployment URL once available.
+## Content and Customization
 
-Do not prefix secret keys with `NEXT_PUBLIC_`.
+Most portfolio content is managed in `data/portfolio.json`.
 
-## Verification
+| Content | Location |
+| --- | --- |
+| Profile, skills, experience, projects, recommendations, and credentials | `data/portfolio.json` |
+| About and homepage metrics | `profile.stats` and `profile.impactStats` in `data/portfolio.json` |
+| Default color palette | `theme` in `data/portfolio.json` |
+| GitHub contribution fallback | `data/github-contributions.json` |
+| Downloadable résumé | `public/`, referenced by `profile.resumeUrl` |
+| Blog articles and metadata | `app/blog/` and `components/blog/posts/` |
+| Shared interface components | `components/` |
+
+## Project Structure
+
+```text
+app/             Pages, route handlers, metadata, and global styles
+components/      Portfolio sections, shared UI, blog content, and playground demos
+data/            Portfolio content and contribution snapshot
+hooks/           Shared React hooks
+lib/             Utilities, contribution parsing, and SEO helpers
+public/          Public assets and downloadable résumé
+tests/           Browser smoke tests and calendar regression tests
+.github/         Continuous integration workflow
+```
+
+## Development and Verification
 
 ```bash
 npm run lint
@@ -40,6 +95,14 @@ npx playwright install chromium
 npm test
 ```
 
-## Attribution
+Playwright starts a development server or reuses one running on port 3000. GitHub Actions runs linting, the production build, and tests on pushes to `main` and on pull requests.
 
-Adapted from Muddusar Zulfiqar's portfolio template. The five retained educational blog articles keep their template attribution; five original AI/ML and automation articles credit Muhammad Faizan Rauf and cite primary documentation. The writing section contains ten articles, including the Claude skills and agent harnesses guide that replaces the JWT article. The original MIT copyright notice is preserved in `LICENSE`.
+The production build is configured to generate Next.js standalone output. Configure the deployment environment, including the public URL, before building for production.
+
+## Contact
+
+[GitHub](https://github.com/faizanrauf6) · [LinkedIn](https://www.linkedin.com/in/m-faizan-rauf) · [Email](mailto:faizanrauf6@gmail.com)
+
+## License
+
+[MIT](LICENSE).
