@@ -78,7 +78,7 @@ for (const width of [320, 375, 1440]) {
     await expect(impact).toBeHidden();
     const profile = page.locator('pre').filter({ hasText: 'Muhammad Faizan Rauf' }).first();
     await expect(profile).toBeVisible();
-    // Each tab should end at its content plus padding, without a fixed-height gap.
+    // About Me should end at its content plus padding, without a fixed-height gap.
     const expectContentFits = async (content: typeof profile) => {
       await expect(async () => {
         const geometry = await content.evaluate(el => {
@@ -93,9 +93,14 @@ for (const width of [320, 375, 1440]) {
     };
     await expectContentFits(profile);
     await page.getByRole('button', { name: 'Tech Stack', exact: true }).click();
+    const stack = page.getByRole('region', { name: 'Technology stack' });
+    await expect(stack).toBeVisible();
+    expect(await stack.evaluate(el => el.scrollHeight > el.clientHeight)).toBe(true);
+    await expect(stack).toHaveCSS('overflow-y', 'auto');
     const lastCategory = page.getByText(portfolioData.skills.at(-1)!.category, { exact: true }).locator('..');
+    await lastCategory.scrollIntoViewIfNeeded();
     await expect(lastCategory).toBeVisible();
-    await expectContentFits(lastCategory);
+    expect(await stack.evaluate(el => el.scrollTop)).toBeGreaterThan(0);
   });
 }
 

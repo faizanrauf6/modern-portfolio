@@ -184,7 +184,7 @@ export default function Hero() {
                   </motion.div>
                 )}
                 {activeTab === 'stack' && (
-                  <motion.div key="stack-tab" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-4">
+                  <motion.div key="stack-tab" role="region" aria-label="Technology stack" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="max-h-[440px] overflow-y-auto custom-scrollbar space-y-4 pr-1">
                     {portfolioData.skills.map((group) => (
                       <div key={group.category}>
                         <span className="text-[9px] text-zinc-500 uppercase tracking-widest block mb-2">{group.category}</span>
