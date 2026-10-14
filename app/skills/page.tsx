@@ -58,14 +58,27 @@ export default function SkillsBentoPage() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[minmax(280px,auto)] gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[minmax(280px,auto)] gap-6">
           
-          {/* 1. Frontend & Frameworks (Spans 2 cols) */}
+          {/* 1. Solution Architecture */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="md:col-span-1 lg:col-span-2 bg-white rounded-3xl p-8 border border-zinc-200 shadow-sm">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 bg-zinc-100 rounded-xl">
+                <Zap className="w-4 h-4 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold text-primary">Solution Architecture</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {architectureSkills.map((skill) => <span key={skill} className="px-3 py-1.5 bg-zinc-50 border border-zinc-200 rounded-lg text-xs text-zinc-600">{skill}</span>)}
+            </div>
+          </motion.div>
+
+          {/* 2. Frontend & Frameworks */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="md:col-span-2 bg-white rounded-3xl p-8 border border-zinc-200/60 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow"
+            transition={{ delay: 0.3 }}
+            className="col-span-1 bg-white rounded-3xl p-8 border border-zinc-200/60 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow"
           >
             <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity duration-500 group-hover:scale-110 transform origin-top-right">
               <Code2 className="w-48 h-48" />
@@ -92,38 +105,6 @@ export default function SkillsBentoPage() {
                   >
                     {skill}
                   </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* 2. Databases (Spans 1 col) */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="col-span-1 bg-zinc-950 rounded-3xl p-8 border border-zinc-800 shadow-xl relative overflow-hidden group text-white flex flex-col"
-          >
-            {/* Glowing background blob */}
-            <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-highlight/20 rounded-full blur-3xl group-hover:bg-highlight/30 transition-colors duration-500" />
-            
-            <div className="relative z-10 h-full flex flex-col">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2.5 bg-zinc-800 rounded-xl border border-zinc-700">
-                  <Database className="w-5 h-5 text-highlight" />
-                </div>
-                <h3 className="text-xl font-bold">Databases</h3>
-              </div>
-
-              <p className="text-sm text-zinc-400 mb-8 leading-relaxed">
-                Working with relational, document, and in-memory data stores.
-              </p>
-
-              <div className="mt-auto flex flex-wrap gap-2">
-                {databaseSkills.map((skill) => (
-                  <span key={skill} className="px-3 py-1.5 bg-zinc-900 border border-zinc-800 rounded-lg text-xs text-zinc-300">
-                    {skill}
-                  </span>
                 ))}
               </div>
             </div>
@@ -163,12 +144,12 @@ export default function SkillsBentoPage() {
             </div>
           </motion.div>
 
-          {/* 4. AI/ML & Data (Spans 1 col) */}
+          {/* 4. AI/ML & Data */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45 }}
-            className="col-span-1 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 border border-emerald-100 shadow-sm relative overflow-hidden group flex flex-col"
+            className="md:col-span-1 lg:col-span-2 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 border border-emerald-100 shadow-sm relative overflow-hidden group flex flex-col"
           >
             <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(52,211,153,0.4)_1px,transparent_1px)] bg-[size:16px_16px]" />
 
@@ -197,26 +178,14 @@ export default function SkillsBentoPage() {
             </div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="col-span-1 bg-white rounded-3xl p-8 border border-zinc-200 shadow-sm">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-zinc-100 rounded-xl">
-                <Zap className="w-4 h-4 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold text-primary">Solution Architecture</h3>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {architectureSkills.map((skill) => <span key={skill} className="px-3 py-1.5 bg-zinc-50 border border-zinc-200 rounded-lg text-xs text-zinc-600">{skill}</span>)}
-            </div>
-          </motion.div>
-
-          {/* 5. Tools & Testing (Spans full row) */}
+          {/* 5. Cloud & DevOps */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="md:col-span-3 bg-white rounded-3xl border border-zinc-200/60 shadow-sm relative overflow-hidden group flex flex-col md:flex-row"
+            className="md:col-span-1 lg:col-span-2 bg-white rounded-3xl border border-zinc-200/60 shadow-sm relative overflow-hidden group flex flex-col lg:flex-row"
           >
-            <div className="p-8 md:w-1/2 bg-zinc-950 text-white flex flex-col justify-center">
+            <div className="p-8 lg:w-1/2 bg-zinc-950 text-white flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-zinc-800 rounded-xl">
                   <Terminal className="w-5 h-5 text-zinc-200" />
@@ -237,7 +206,7 @@ export default function SkillsBentoPage() {
             </div>
             
             {/* Terminal Visual */}
-            <div className="md:w-1/2 bg-white p-6 md:p-8 relative flex items-center justify-center">
+            <div className="lg:w-1/2 bg-white p-6 md:p-8 relative flex items-center justify-center">
               <div className="w-full max-w-sm bg-zinc-50 rounded-xl border border-zinc-200 shadow-lg overflow-hidden font-mono text-[10px] md:text-xs">
                 <div className="flex items-center gap-1.5 px-4 py-2.5 bg-zinc-100 border-b border-zinc-200">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
@@ -265,7 +234,39 @@ export default function SkillsBentoPage() {
               </div>
             </div>
           </motion.div>
-          
+          {/* 6. Databases */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.55 }}
+            className="col-span-1 bg-zinc-950 rounded-3xl p-8 border border-zinc-800 shadow-xl relative overflow-hidden group text-white flex flex-col"
+          >
+            {/* Glowing background blob */}
+            <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-highlight/20 rounded-full blur-3xl group-hover:bg-highlight/30 transition-colors duration-500" />
+
+            <div className="relative z-10 h-full flex flex-col">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2.5 bg-zinc-800 rounded-xl border border-zinc-700">
+                  <Database className="w-5 h-5 text-highlight" />
+                </div>
+                <h3 className="text-xl font-bold">Databases</h3>
+              </div>
+
+              <p className="text-sm text-zinc-400 mb-8 leading-relaxed">
+                Working with relational, document, and in-memory data stores.
+              </p>
+
+              <div className="mt-auto flex flex-wrap gap-2">
+                {databaseSkills.map((skill) => (
+                  <span key={skill} className="px-3 py-1.5 bg-zinc-900 border border-zinc-800 rounded-lg text-xs text-zinc-300">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+
         </div>
       </div>
     </main>
