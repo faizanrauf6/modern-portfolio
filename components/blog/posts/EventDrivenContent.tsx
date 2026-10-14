@@ -15,7 +15,7 @@ const STEPS = [
 
 export default function EventDrivenContent() {
   return (
-    <BlogShell category="Solution Architecture" icon={Workflow}
+    <BlogShell category="Solution Architect" icon={Workflow}
       title={<>Reliable event-driven <span className="text-accent">integrations.</span></>}
       subtitle="Connect databases, message brokers, and partner APIs without losing accepted work or treating every retry as safe."
       readTime="7 min read" author="Muhammad Faizan Rauf"

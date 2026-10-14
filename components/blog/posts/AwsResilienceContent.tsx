@@ -15,7 +15,7 @@ const STEPS = [
 
 export default function AwsResilienceContent() {
   return (
-    <BlogShell category="Solution Architecture" icon={Cloud}
+    <BlogShell category="Solution Architect" icon={Cloud}
       title={<>Building observable, <span className="text-accent">resilient AWS systems.</span></>}
       subtitle="Connect telemetry, bounded failure handling, deployment controls, and recovery drills so cloud applications can recover in ways you can verify."
       readTime="6 min read" author="Muhammad Faizan Rauf"

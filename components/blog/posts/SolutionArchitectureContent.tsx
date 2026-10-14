@@ -15,8 +15,8 @@ const STEPS = [
 
 export default function SolutionArchitectureContent() {
   return (
-    <BlogShell category="Solution Architecture" icon={Layers}
-      title={<>From requirements to <span className="text-accent">solution architecture.</span></>}
+    <BlogShell category="Solution Architect" icon={Layers}
+      title={<>From requirements to a <span className="text-accent">solution architect&apos;s plan.</span></>}
       subtitle="Translate a business goal into service boundaries, measurable constraints, and decisions a delivery team can explain and test."
       readTime="6 min read" author="Muhammad Faizan Rauf"
       more={[

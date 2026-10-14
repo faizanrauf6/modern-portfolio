@@ -13,7 +13,7 @@ const ROUTES: { path: string; heading: RegExp }[] = [
   { path: '/blog/evaluating-phishing-detection-models', heading: /phishing/i },
   { path: '/blog/serving-python-ml-models-with-nestjs', heading: /NestJS/i },
   { path: '/blog/how-claude-skills-and-harnesses-work', heading: /Claude.*skills/i },
-  { path: '/blog/from-requirements-to-solution-architecture', heading: /requirements.*architecture/i },
+  { path: '/blog/from-requirements-to-solution-architecture', heading: /requirements.*architect/i },
   { path: '/blog/designing-reliable-event-driven-integrations', heading: /event-driven.*integrations/i },
   { path: '/blog/building-observable-resilient-aws-systems', heading: /observable.*AWS/i },
 ];
@@ -32,9 +32,9 @@ for (const { path, heading } of ROUTES) {
 
 test('final CV identity reaches metadata, the profile dashboard, and the downloadable CV', async ({ page, request }) => {
   await page.goto('/');
-  await expect(page).toHaveTitle(/Senior Software and AI\/ML Engineer.*Solution Architecture.*Cloud Systems/);
+  await expect(page).toHaveTitle(/Senior Software and AI\/ML Engineer.*Solution Architect.*Cloud Systems/);
   const person = await page.locator('script[type="application/ld+json"]').first().textContent();
-  expect(JSON.parse(person!).jobTitle).toBe('Senior Software and AI/ML Engineer | Solution Architecture | Cloud Systems');
+  expect(JSON.parse(person!).jobTitle).toBe('Senior Software and AI/ML Engineer | Solution Architect | Cloud Systems');
   await expect(page.locator('pre')).toContainText('Senior Software and AI/ML Engineer');
   await expect(page.locator('#credentials')).toContainText('Professional');
   await expect(page.locator('#credentials').getByText('Native', { exact: true })).toHaveCount(2);
@@ -68,7 +68,7 @@ test('final CV project sequence and integration skills are displayed', async ({ 
 test('architecture articles are discoverable through their category and registered in the sitemap', async ({ page, request }) => {
   await page.goto('/blog');
   await expect(page.getByText('13 articles', { exact: true })).toBeVisible();
-  await page.getByRole('button', { name: /^Solution Architecture/ }).click();
+  await page.getByRole('button', { name: /^Solution Architect/ }).click();
   const paths = [
     '/blog/from-requirements-to-solution-architecture',
     '/blog/designing-reliable-event-driven-integrations',

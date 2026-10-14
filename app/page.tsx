@@ -24,7 +24,7 @@ export default function PortfolioPage() {
     {
       href: '/skills',
       title: 'Technical Stack',
-      desc: 'Solution architecture, enterprise RAG, multi-agent systems, AWS infrastructure, and full-stack engineering.',
+      desc: 'Solution architect expertise, enterprise RAG, multi-agent systems, AWS infrastructure, and full-stack engineering.',
       icon: Cpu,
       color: 'text-emerald-500 bg-emerald-500/5 border-emerald-500/10',
       badge: 'Next.js · NestJS · Python'
@@ -48,7 +48,7 @@ export default function PortfolioPage() {
     {
       href: '/blog',
       title: 'How Things Work',
-      desc: 'Practical guides to solution architecture, event-driven integrations, AWS reliability, RAG, and AI workflows.',
+      desc: 'Practical guides for solution architects covering event-driven integrations, AWS reliability, RAG, and AI workflows.',
       icon: BookOpen,
       color: 'text-rose-500 bg-rose-500/5 border-rose-500/10',
       badge: 'Architecture · AI · AWS'

@@ -16,7 +16,7 @@ export default function SkillsBentoPage() {
 
   const frontendSkills = getSkills('Frontend & Frameworks');
   const databaseSkills = getSkills('Databases');
-  const architectureSkills = getSkills('Solution Architecture');
+  const architectureSkills = getSkills('Solution Architect');
   const backendSkills = [...getSkills('Backend & APIs'), ...getSkills('Integrations & Protocols')];
   const aiMlSkills = getSkills('AI/ML & Data');
   const toolsSkills = getSkills('Cloud & DevOps');
@@ -60,7 +60,7 @@ export default function SkillsBentoPage() {
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[minmax(280px,auto)] gap-6">
           
-          {/* 1. Solution Architecture (Spans 2 cols) */}
+          {/* 1. Solution Architect (Spans 2 cols) */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function SkillsBentoPage() {
                 <div className="p-2.5 bg-primary text-bg rounded-xl shadow-sm">
                   <Code2 className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-bold text-primary">Solution Architecture</h3>
+                <h3 className="text-xl font-bold text-primary">Solution Architect</h3>
               </div>
               
               <p className="text-sm text-zinc-500 mb-8 max-w-md leading-relaxed">

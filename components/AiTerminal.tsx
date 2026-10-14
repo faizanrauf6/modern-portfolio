@@ -20,7 +20,7 @@ const FIRST = profile.displayName;
 const TERMINAL_HOST = profile.name.trim().split(/\s+/).map((part) => part[0]).join('').toLowerCase();
 
 const SUGGESTIONS = [
-  `What is ${FIRST}'s approach to solution architecture?`,
+  `What is ${FIRST}'s approach as a solution architect?`,
   'What distributed systems and cloud platforms has he designed?',
   'Tell me about his enterprise RAG and multi-agent experience.',
   `What is ${FIRST}'s experience with React and Next.js?`,

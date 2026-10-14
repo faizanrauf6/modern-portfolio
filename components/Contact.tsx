@@ -11,7 +11,7 @@ export default function Contact() {
           <div>
             <h2 className="text-xl min-[375px]:text-2xl sm:text-3xl xl:text-4xl font-medium tracking-tight mb-7 whitespace-nowrap">Let&apos;s build <span className="text-accent">together.</span></h2>
             <p className="text-sm md:text-base text-zinc-500 max-w-md mb-8">
-              Let&apos;s discuss solution architecture, intelligent automation,
+              Work with a solution architect on intelligent automation
               and resilient cloud systems for your next product.
             </p>
             

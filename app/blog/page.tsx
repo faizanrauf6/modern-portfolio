@@ -41,10 +41,10 @@ type Post = {
 const POSTS: Post[] = [
   {
     href: '/blog/from-requirements-to-solution-architecture',
-    title: 'From Requirements to Solution Architecture',
+    title: 'From Requirements to a Solution Architect’s Plan',
     excerpt: 'Move from a business goal to measurable quality attributes, service boundaries, and architecture decisions you can explain and validate.',
     icon: Layers,
-    category: 'Solution Architecture',
+    category: 'Solution Architect',
     tags: ['System Design', 'C4 Model', 'ADRs', 'Trade-offs'],
     level: 'Intermediate',
     readTime: '6 min read',
@@ -56,7 +56,7 @@ const POSTS: Post[] = [
     title: 'Designing Reliable Event-Driven Integrations',
     excerpt: 'Follow an accepted order through the outbox, broker, and partner API. Make duplicate delivery, tenant boundaries, and uncertain outcomes explicit.',
     icon: Workflow,
-    category: 'Solution Architecture',
+    category: 'Solution Architect',
     tags: ['Event-Driven Systems', 'Outbox', 'Idempotency', 'Multi-Tenancy'],
     level: 'Advanced',
     readTime: '7 min read',
@@ -68,7 +68,7 @@ const POSTS: Post[] = [
     title: 'Building Observable, Resilient AWS Systems',
     excerpt: 'Connect metrics, logs, health checks, deployment controls, and recovery drills to the user operations your cloud application must complete.',
     icon: Cloud,
-    category: 'Solution Architecture',
+    category: 'Solution Architect',
     tags: ['AWS', 'CloudWatch', 'Observability', 'Resilience'],
     level: 'Intermediate',
     readTime: '6 min read',
@@ -252,7 +252,7 @@ export default function BlogIndexPage() {
             <span className="text-accent">actually work.</span>
           </h1>
           <p className="max-w-lg text-sm md:text-base text-zinc-500 mt-5 leading-relaxed">
-            Practical guides to solution architecture, distributed systems, AI, and cloud delivery.
+            Practical guides for solution architects covering distributed systems, AI, and cloud delivery.
             Explore the trade-offs, follow a workflow through an interactive diagram, and see how
             the pieces fit together.
           </p>

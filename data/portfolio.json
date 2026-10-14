@@ -3,7 +3,7 @@
     "name": "Muhammad Faizan Rauf",
     "displayName": "Faizan",
     "lastName": "Rauf",
-    "title": "Senior Software and AI/ML Engineer | Solution Architecture | Cloud Systems",
+    "title": "Senior Software and AI/ML Engineer | Solution Architect | Cloud Systems",
     "tagline": "Building distributed systems, AI-powered automation, and cloud infrastructure",
     "coreStack": [
       "Next.js",
@@ -42,7 +42,7 @@
     "npm": "",
     "resumeUrl": "/M_Faizan_Rauf_SSE_AI_ML_Cloud_Engineer_CV.pdf",
     "location": "Lahore, Pakistan",
-    "summary": "Senior Software and AI/ML Engineer with 7+ years of experience designing distributed systems, AI-powered automation, and cloud infrastructure across FinTech, healthcare, e-commerce, and IoT. Translates business requirements into solution architecture, covering API-first design, event-driven microservices, and multi-tenant integrations. Builds AI workflows with the Anthropic API, enterprise RAG, Model Context Protocol (MCP), and multi-agent orchestration. Delivered production systems including marketplace integrations across 5+ partner APIs, read-only FHIR access to Epic and Cerner, and real-time cloud-to-device HVAC communication. Builds backends with Next.js, NestJS, and Python, deploys on AWS with Docker and CI/CD, and mentors engineers through code reviews and architecture guidance.",
+    "summary": "Senior Software and AI/ML Engineer with 7+ years of experience designing distributed systems, AI-powered automation, and cloud infrastructure across FinTech, healthcare, e-commerce, and IoT. Translates business requirements into technical designs as a solution architect, covering API-first design, event-driven microservices, and multi-tenant integrations. Builds AI workflows with the Anthropic API, enterprise RAG, Model Context Protocol (MCP), and multi-agent orchestration. Delivered production systems including marketplace integrations across 5+ partner APIs, read-only FHIR access to Epic and Cerner, and real-time cloud-to-device HVAC communication. Builds backends with Next.js, NestJS, and Python, deploys on AWS with Docker and CI/CD, and mentors engineers through code reviews and architecture guidance.",
     "yearsOfExp": "7+",
     "stats": [
       {
@@ -99,7 +99,7 @@
       }
     ],
     "focus": [
-      "Solution Architecture",
+      "Solution Architect",
       "AI/ML",
       "Cloud Systems"
     ],
@@ -115,7 +115,7 @@
   },
   "skills": [
     {
-      "category": "Solution Architecture",
+      "category": "Solution Architect",
       "items": [
         "System Design",
         "Distributed Systems",
@@ -221,7 +221,7 @@
       "period": "Jan 2023 – Present",
       "location": "Lahore, Pakistan",
       "description": [
-        "Design solution architecture and event-driven microservices with Next.js, NestJS, and TypeScript, with clear service boundaries and data ownership.",
+        "Design event-driven microservices as a solution architect with Next.js, NestJS, and TypeScript, with clear service boundaries and data ownership.",
         "Build AI orchestration workflows using the Anthropic API, RAG pipelines, and MCP-connected agents for cross-platform automation, backed by Python data-processing and machine learning pipelines (NumPy, Pandas).",
         "Connect cloud applications to commercial HVAC equipment using Socket.IO and Modbus for real-time device communication.",
         "Configure AWS and Docker environments, troubleshoot releases, and optimize application performance; mentor engineers through code reviews, technical guidance, and architecture discussions."
