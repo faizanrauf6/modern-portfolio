@@ -586,7 +586,7 @@
     {
       "name": "Nasir Mehmood",
       "title": "Lead Manager",
-      "relation": "Lead",
+      "relation": "Project collaborator",
       "project": "Mahir Company",
       "date": "",
       "status": "approved",
@@ -596,7 +596,7 @@
     {
       "name": "Khizar Rehman",
       "title": "Project Lead, SpeakShift",
-      "relation": "Project lead",
+      "relation": "Project collaborator",
       "project": "SpeakShift",
       "date": "",
       "status": "approved",
