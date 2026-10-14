@@ -104,6 +104,32 @@ for (const width of [320, 375, 1440]) {
   });
 }
 
+for (const viewport of [{ width: 1280, height: 900 }, { width: 1440, height: 1200 }]) {
+  test(`hero name stays in place while dashboard tabs resize at ${viewport.width}x${viewport.height}`, async ({ page }) => {
+    await page.setViewportSize(viewport);
+    await page.goto('/');
+    const heading = page.getByRole('heading', { name: /Muhammad Faizan Rauf/i }).first();
+    await expect(heading.locator('..')).toHaveCSS('transform', 'none');
+
+    for (const tab of ['Impact', 'About Me', 'Tech Stack', 'About Me']) {
+      const positions = page.evaluate(() => new Promise<number[]>(resolve => {
+        const heading = document.querySelector('h1')!;
+        const samples: number[] = [];
+        const start = performance.now();
+        const sample = () => {
+          samples.push(heading.getBoundingClientRect().top + window.scrollY);
+          if (performance.now() - start < 1000) requestAnimationFrame(sample);
+          else resolve(samples);
+        };
+        sample();
+      }));
+      await page.getByRole('button', { name: tab, exact: true }).click();
+      const samples = await positions;
+      expect(Math.max(...samples) - Math.min(...samples), `Name should stay anchored when selecting ${tab}`).toBeLessThan(1);
+    }
+  });
+}
+
 test('six approved recommendations retain LinkedIn attribution only where supplied', async ({ page }) => {
   await page.goto('/');
   const section = page.locator('#testimonials');

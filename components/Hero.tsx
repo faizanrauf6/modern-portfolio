@@ -19,7 +19,7 @@ export default function Hero() {
   const [activeTab, setActiveTab] = useState<'code' | 'metrics' | 'stack'>('code');
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 py-20 lg:px-24 overflow-hidden border-b border-zinc-100/50">
+    <section className="relative min-h-screen flex flex-col justify-start px-6 py-20 lg:px-24 overflow-hidden border-b border-zinc-100/50">
       {/* Dotted Grid Background */}
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_-20%,#000_70%,transparent_100%)]" />
       
@@ -27,10 +27,10 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/12 -z-10 w-72 h-72 rounded-full bg-accent/8 blur-[100px] animate-pulse" />
       <div className="absolute top-1/3 right-1/12 -z-10 w-96 h-96 rounded-full bg-primary/5 blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
 
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center z-10">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start z-10">
         
         {/* Left Column (Primary Copy) */}
-        <div className="lg:col-span-7 flex flex-col justify-center">
+        <div className="lg:col-span-7 lg:pt-12 flex flex-col justify-center">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
