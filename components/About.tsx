@@ -11,9 +11,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="px-6 py-8 lg:px-24 bg-bg border-b border-primary/10"
+      className="px-6 py-10 md:py-12 lg:px-24 bg-bg border-b border-primary/10"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-x-12 lg:gap-x-16 gap-y-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-x-12 lg:gap-x-16 gap-y-10">
         {/* Left: label + statement */}
         <div className="lg:col-span-5">
           <span className="text-[10px] font-mono uppercase tracking-widest text-text/50 block mb-4">

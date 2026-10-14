@@ -63,10 +63,10 @@ export default function PortfolioPage() {
       <About />
 
       {/* Visual Portals Grid */}
-      <section className="px-6 py-8 lg:px-24 bg-zinc-50/50 relative border-b border-zinc-100">
+      <section className="px-6 py-10 md:py-12 lg:px-24 bg-zinc-50/50 relative border-b border-zinc-100">
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808003_1px,transparent_1px),linear-gradient(to_bottom,#80808003_1px,transparent_1px)] bg-[size:16px_16px]" />
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start mb-8 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start mb-10 gap-6">
             <div>
               <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 block mb-2">Navigation Portal</span>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Explore the <span className="text-accent">Portfolio.</span></h2>

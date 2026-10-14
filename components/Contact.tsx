@@ -5,12 +5,12 @@ export default function Contact() {
   const { profile } = portfolioData;
   
   return (
-    <section className="px-6 py-8 lg:px-24 border-t border-zinc-100">
+    <section className="px-6 pt-10 pb-8 md:py-12 lg:px-24 border-t border-zinc-100">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           <div>
-            <h2 className="text-4xl font-medium tracking-tight mb-6">Let&apos;s build <br /><span className="text-accent">together.</span></h2>
-            <p className="text-sm md:text-base text-zinc-500 max-w-md mb-6">
+            <h2 className="text-4xl font-medium tracking-tight mb-7">Let&apos;s build <br /><span className="text-accent">together.</span></h2>
+            <p className="text-sm md:text-base text-zinc-500 max-w-md mb-8">
               Let&apos;s discuss full-stack engineering, AI-powered automation,
               and cloud delivery for your next product.
             </p>
@@ -61,7 +61,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <footer className="mt-8 pt-6 border-t border-zinc-100 flex justify-center items-center text-zinc-400 text-[10px] md:text-xs uppercase tracking-widest">
+        <footer className="mt-10 md:mt-12 pt-8 border-t border-zinc-100 flex justify-center items-center text-zinc-400 text-[10px] md:text-xs uppercase tracking-widest">
           <p className="text-center">© 2026 <span className="block sm:inline">{profile.name}</span></p>
         </footer>
       </div>

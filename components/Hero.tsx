@@ -19,7 +19,7 @@ export default function Hero() {
   const [activeTab, setActiveTab] = useState<'code' | 'metrics' | 'stack'>('code');
 
   return (
-    <section className="relative flex flex-col justify-start px-6 pt-20 pb-8 lg:px-24 overflow-hidden border-b border-zinc-100/50">
+    <section className="relative flex flex-col justify-start px-6 pt-20 pb-10 md:pb-12 lg:px-24 overflow-hidden border-b border-zinc-100/50">
       {/* Dotted Grid Background */}
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_-20%,#000_70%,transparent_100%)]" />
       
@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/12 -z-10 w-72 h-72 rounded-full bg-accent/8 blur-[100px] animate-pulse" />
       <div className="absolute top-1/3 right-1/12 -z-10 w-96 h-96 rounded-full bg-primary/5 blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
 
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start z-10">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start z-10">
         
         {/* Left Column (Primary Copy) */}
         <div className="lg:col-span-7 lg:pt-12 flex flex-col justify-center">
@@ -51,7 +51,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium tracking-tight leading-[0.95] md:leading-[0.9] mb-6 font-sans">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium tracking-tight leading-[0.95] md:leading-[0.9] mb-7 font-sans">
               {profile.name.split(' ')[0]} <br />
               <span className="text-accent hover:text-primary transition-colors duration-300 relative inline-block group">
                 {profile.name.split(' ').slice(1).join(' ')}
@@ -66,7 +66,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="max-w-xl"
           >
-            <p className="text-lg lg:text-xl text-zinc-600 leading-relaxed mb-6 font-sans">
+            <p className="text-lg lg:text-xl text-zinc-600 leading-relaxed mb-7 font-sans">
               {profile.title} with <span className="text-primary font-semibold border-b-2 border-highlight/40 pb-0.5">{profile.yearsOfExp} years</span> of experience across e-commerce, healthcare, blockchain, and real-time systems.
             </p>
             
@@ -210,7 +210,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mt-8 pt-6 border-t border-primary/10 w-full"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mt-10 md:mt-12 pt-8 border-t border-primary/10 w-full"
         >
           {profile.impactStats.map((stat) => (
             <motion.div 
