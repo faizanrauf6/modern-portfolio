@@ -210,7 +210,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mt-10 md:mt-12 pt-8 border-t border-primary/10 w-full"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mt-10 md:mt-12 pt-10 border-t border-primary/10 w-full"
         >
           {profile.impactStats.map((stat) => (
             <motion.div 
