@@ -101,7 +101,7 @@ The production build is configured to generate Next.js standalone output. Config
 
 ## Deployment
 
-[View the live portfolio](https://modern-portfolio-one-khaki.vercel.app).
+[View the live portfolio](https://resume-m-faizan-rauf.vercel.app).
 
 The site uses Vercel's Next.js framework preset and the repository root as the project directory. Deployments are currently published manually:
 
