@@ -1,109 +1,76 @@
-# Muhammad Faizan Rauf — Portfolio
+# Muhammad Faizan Rauf – Senior Full Stack & AI/ML Engineer Portfolio
 
-Personal portfolio showcasing full-stack engineering, AI/ML, automation, and DevOps experience across commercial products and open-source projects.
+Minimal, responsive portfolio built with **Next.js 15**, **Tailwind CSS 4**, and **Motion**.
 
-Built with Next.js, React, TypeScript, Tailwind CSS, and Motion.
+Profile content is managed through **JSON**, with an optional **OpenAI-powered terminal**.
 
-## Features
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=nextdotjs)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Motion](https://img.shields.io/badge/Motion-12-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://motion.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-- Professional profile, experience timeline, education, and recommendations.
-- Project case studies with technology stacks, contributions, and website or repository links.
-- Selected GitHub repositories and a contribution calendar with daily refreshes and a snapshot fallback.
-- Technical articles on AI agents, Claude skills, machine learning, backend systems, and delivery workflows.
-- Interactive playground for responsive layouts, themes, animations, accessibility, and performance.
-- Optional AI terminal for questions about the portfolio, with built-in commands available offline.
-- Responsive navigation, keyboard command palette, and customizable colors and typography.
+**[View Live Portfolio](https://resume-m-faizan-rauf.vercel.app/)**
 
-## Technology Stack
+## ✨ Features
 
-| Area | Technologies |
-| --- | --- |
-| Framework | Next.js 15 App Router, React 19 |
-| Language | TypeScript |
-| Styling | Tailwind CSS 4, CSS custom properties |
-| Animation and icons | Motion, Lucide React |
-| Integrations | OpenAI SDK, GitHub GraphQL and public contribution calendar |
-| Analytics | Vercel Analytics, Speed Insights |
-| Quality checks | ESLint, TypeScript, Playwright, GitHub Actions |
+- **Next.js App Router** – Dedicated pages for experience, skills, projects, writing, and the playground.
+- **Fully Responsive** – Layouts for desktop, tablet, and mobile.
+- **Smooth Animations** – Page entrances and interactive effects powered by Motion.
+- **Theme Customization** – Five color palettes, three font styles, and theme-aware profile JSON.
+- **JSON-Based Profile** – Update skills, experience, projects, metrics, and recommendations in one file.
+- **GitHub Activity** – Selected repositories and a contribution calendar with a snapshot fallback.
+- **Technical Writing & Playground** – Articles on AI/ML, agents, automation, and backend engineering, plus interactive demos.
+- **Optional AI Terminal** – OpenAI-powered profile answers, with built-in commands available without an API key.
 
-## Getting Started
+## 🚀 Quick Start
 
-Use Node.js 20 or later and npm.
+Use **Node.js 20 or later** and **npm**.
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/faizanrauf6/modern-portfolio.git
 cd modern-portfolio
-npm ci
-npm run dev
 ```
 
-Open [localhost:3000](http://localhost:3000).
+### 2. Install Dependencies
 
-## Configuration
+```bash
+npm ci
+```
 
-Copy the environment template to configure optional integrations:
+### 3. Configure Environment (Optional for AI Features)
+
+Copy the environment template:
 
 ```bash
 cp .env.example .env.local
 ```
 
-| Variable | Purpose |
-| --- | --- |
-| `SITE_URL` | Public portfolio URL used for canonical links, structured data, and the sitemap. |
-| `OPENAI_API_KEY` | Server-side key that enables AI-generated terminal answers. |
-| `OPENAI_MODEL` | Optional model override for the AI terminal. |
-| `GITHUB_TOKEN` | Optional server-side token for GitHub GraphQL contribution requests. |
+To enable AI answers, add your OpenAI API key to `.env.local`:
 
-The portfolio runs without API credentials. The GitHub calendar uses public data when no token is configured and retains a dated snapshot if GitHub is unavailable. The terminal's built-in commands work independently of AI access.
-
-Set `SITE_URL` or `profile.website` in `data/portfolio.json` when the public domain is available. Without a public URL, search indexing and sitemap entries remain disabled. Keep API credentials server-side; `.env.local` is excluded from version control.
-
-## Content and Customization
-
-Most portfolio content is managed in `data/portfolio.json`.
-
-| Content | Location |
-| --- | --- |
-| Profile, skills, experience, projects, recommendations, and credentials | `data/portfolio.json` |
-| About and homepage metrics | `profile.stats` and `profile.impactStats` in `data/portfolio.json` |
-| Default color palette | `theme` in `data/portfolio.json` |
-| GitHub contribution fallback | `data/github-contributions.json` |
-| Downloadable résumé | `public/`, referenced by `profile.resumeUrl` |
-| Blog articles and metadata | `app/blog/` and `components/blog/posts/` |
-| Shared interface components | `components/` |
-
-## Project Structure
-
-```text
-app/             Pages, route handlers, metadata, and global styles
-components/      Portfolio sections, shared UI, blog content, and playground demos
-data/            Portfolio content and contribution snapshot
-hooks/           Shared React hooks
-lib/             Utilities, contribution parsing, and SEO helpers
-public/          Public assets and downloadable résumé
-tests/           Browser smoke tests and calendar regression tests
-.github/         Continuous integration workflow
+```dotenv
+OPENAI_API_KEY="your_openai_api_key"
+OPENAI_MODEL="gpt-4o-mini"
 ```
 
-## Development and Verification
+Keep the key server-side; do not prefix it with `NEXT_PUBLIC_`. The portfolio runs without API credentials, and `.env.local` is excluded from Git and deployment uploads.
+
+### 4. Run the Development Server
 
 ```bash
-npm run lint
-npx tsc --noEmit
-npm run build
-npx playwright install chromium
-npm test
+npm run dev
 ```
 
-Playwright starts a development server or reuses one running on port 3000. GitHub Actions runs linting, the production build, and tests on pushes to `main` and on pull requests.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The production build is configured to generate Next.js standalone output. Configure the deployment environment, including the public URL, before building for production.
+## 🎨 Customize Your Portfolio
 
-## Deployment
+Edit `data/portfolio.json` to update the profile, skills, experience, projects, metrics, recommendations, and default theme. Blog content lives in `app/blog/` and `components/blog/posts/`; the downloadable résumé lives in `public/`.
 
-[View the live portfolio](https://resume-m-faizan-rauf.vercel.app).
+## ☁️ Deploy to Vercel
 
-The site uses Vercel's Next.js framework preset and the repository root as the project directory. Deployments are currently published manually:
+The project uses Vercel's **Next.js preset** with the repository root as its project directory. Deployments are currently manual:
 
 ```bash
 npx vercel login
@@ -111,14 +78,27 @@ npx vercel link --project modern-portfolio --scope faizanrauf6s-projects --yes
 npx vercel deploy --prod --scope faizanrauf6s-projects
 ```
 
-Set `SITE_URL` to the primary production URL in the project's environment settings. Optional AI and GitHub credentials can be configured there as well. GitHub pushes update the repository; publish a new Vercel deployment to make those changes live.
+Set `SITE_URL` to `https://resume-m-faizan-rauf.vercel.app` in Vercel's production environment. Add `OPENAI_API_KEY` there to enable live AI answers. `GITHUB_TOKEN` is optional for authenticated GitHub contribution requests.
 
-Local Vercel metadata and environment files are excluded from version control and deployment uploads.
+GitHub pushes update the repository; run a manual deployment to publish those changes to the live site.
 
-## Contact
+## ✅ Quality Checks
+
+```bash
+npm run lint
+npm run build
+npx playwright install chromium
+npm test
+```
+
+GitHub Actions runs lint, the production build, and tests on pushes to `main` and on pull requests.
+
+## 📄 License
+
+[MIT License](LICENSE).
+
+---
+
+Built with ❤️ by **Muhammad Faizan Rauf**
 
 [GitHub](https://github.com/faizanrauf6) · [LinkedIn](https://www.linkedin.com/in/m-faizan-rauf) · [Email](mailto:faizanrauf6@gmail.com)
-
-## License
-
-[MIT](LICENSE).
