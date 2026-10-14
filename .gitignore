@@ -1,0 +1,16 @@
+node_modules/
+.next/
+*.tsbuildinfo
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# Unused resume inherited from the original template
+/data/Muddusar_Zulfiqar_Resume.pdf
