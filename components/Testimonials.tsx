@@ -65,9 +65,9 @@ export default function Testimonials() {
   if (testimonials.length === 0) return null;
 
   return (
-    <section id="testimonials" aria-labelledby="testimonials-title" className="px-6 py-24 lg:px-24 bg-bg border-b border-primary/10">
+    <section id="testimonials" aria-labelledby="testimonials-title" className="px-6 py-8 lg:px-24 bg-bg border-b border-primary/10">
       <div className="max-w-7xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="flex flex-col md:flex-row justify-between items-start mb-14 gap-6">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="flex flex-col md:flex-row justify-between items-start mb-8 gap-6">
           <div>
             <span className="text-[10px] font-mono uppercase tracking-widest text-text/50 block mb-2">Recommendations</span>
             <h2 id="testimonials-title" className="text-3xl md:text-4xl font-semibold tracking-tight text-primary">What colleagues <span className="text-accent">say.</span></h2>

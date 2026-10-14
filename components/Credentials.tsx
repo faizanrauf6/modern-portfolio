@@ -10,7 +10,7 @@ export default function Credentials() {
   return (
     <section
       id="credentials"
-      className="px-6 py-24 lg:px-24 bg-bg border-b border-primary/10"
+      className="px-6 py-8 lg:px-24 bg-bg border-b border-primary/10"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -18,7 +18,7 @@ export default function Credentials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-14"
+          className="mb-8"
         >
           <span className="text-[10px] font-mono uppercase tracking-widest text-text/50 block mb-2">
             Background
