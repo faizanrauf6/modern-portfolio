@@ -56,7 +56,7 @@ export default function About() {
 
         </div>
 
-        <div className="lg:col-span-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 pt-6 border-t border-primary/10">
+        <div className="lg:col-span-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 pt-8 border-t border-primary/10">
             {facts.map((f, idx) => (
               <motion.div
                 key={f.label}
