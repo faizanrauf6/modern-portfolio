@@ -11,7 +11,7 @@ const ROUTES: { path: string; heading: RegExp }[] = [
   { path: '/blog/how-mcp-tool-calling-works', heading: /MCP/i },
   { path: '/blog/building-reliable-ai-automation', heading: /automation/i },
   { path: '/blog/evaluating-phishing-detection-models', heading: /phishing/i },
-  { path: '/blog/serving-python-ml-models-with-nestjs', heading: /NestJS/i },
+  { path: '/blog/serving-python-ai-models-with-nestjs', heading: /NestJS/i },
   { path: '/blog/how-claude-skills-and-harnesses-work', heading: /Claude.*skills/i },
   { path: '/blog/from-requirements-to-solution-architecture', heading: /requirements.*architect/i },
   { path: '/blog/designing-reliable-event-driven-integrations', heading: /event-driven.*integrations/i },
@@ -32,20 +32,20 @@ for (const { path, heading } of ROUTES) {
 
 test('final CV identity reaches metadata, the profile dashboard, and the downloadable CV', async ({ page, request }) => {
   await page.goto('/');
-  await expect(page).toHaveTitle(/Senior Software and AI\/ML Engineer.*Solution Architect.*Cloud Systems/);
+  await expect(page).toHaveTitle(/Senior Software and AI Engineer.*Solution Architect.*Cloud Systems/);
   const person = await page.locator('script[type="application/ld+json"]').first().textContent();
-  expect(JSON.parse(person!).jobTitle).toBe('Senior Software and AI/ML Engineer | Solution Architect | Cloud Systems');
-  await expect(page.locator('pre')).toContainText('Senior Software and AI/ML Engineer');
+  expect(JSON.parse(person!).jobTitle).toBe('Senior Software and AI Engineer | Solution Architect | Cloud Systems');
+  await expect(page.locator('pre')).toContainText('Senior Software and AI Engineer');
   await expect(page.locator('#credentials')).toContainText('Professional');
   await expect(page.locator('#credentials').getByText('Native', { exact: true })).toHaveCount(2);
   await page.getByRole('button', { name: 'View Résumé', exact: true }).click();
-  const cvPath = '/M_Faizan_Rauf_SSE_AI_ML_Cloud_Engineer_CV.pdf';
+  const cvPath = '/M_Faizan_Rauf_SSE_AI_Cloud_Engineer_CV.pdf';
   await expect(page.getByRole('link', { name: 'Download', exact: true })).toHaveAttribute('href', cvPath);
   await expect(page.locator('iframe')).toHaveAttribute('src', `${cvPath}#view=FitH`);
   const pdf = await request.get(cvPath);
   expect(pdf.status()).toBe(200);
   expect((await pdf.body()).subarray(0, 5).toString()).toBe('%PDF-');
-  for (const oldPath of ['/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf', '/M_Faizan_Rauf_Senior_Full_Stack_AI_ML_DevOps_CV.pdf']) {
+  for (const oldPath of ['/M_Faizan_Rauf_SSE_AI_ML_Cloud_Engineer_CV.pdf', '/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf', '/M_Faizan_Rauf_Senior_Full_Stack_AI_ML_DevOps_CV.pdf']) {
     const redirect = await request.get(oldPath, { maxRedirects: 0 });
     expect(redirect.status()).toBe(308);
     expect(redirect.headers().location).toBe(cvPath);

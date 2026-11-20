@@ -10,7 +10,7 @@ const PUBLISHED = '2026-10-14';
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  keywords: ['phishing detection', 'machine learning evaluation', 'precision recall', 'data leakage', 'temporal split'],
+  keywords: ['phishing detection', 'AI evaluation', 'precision recall', 'data leakage', 'temporal split'],
   alternates: HAS_SITE_URL ? { canonical: `${SITE_URL}/blog/${SLUG}` } : undefined,
   openGraph: {
     type: 'article',

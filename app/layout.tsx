@@ -31,7 +31,7 @@ const keywords = Array.from(
     'Senior Software Engineer',
     'Cloud Systems Engineer',
     'Distributed Systems',
-    'AI/ML Engineer',
+    'AI Engineer',
     'DevOps',
     'Lahore',
     'Pakistan',

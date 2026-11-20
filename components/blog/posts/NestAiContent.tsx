@@ -13,7 +13,7 @@ const STEPS = [
   { icon: Server, title: 'Respond', tag: 'Honest outcome', detail: 'The API returns a score plus model version, or a clear unavailable result. A timeout must never be translated into a confident benign prediction.' },
 ];
 
-export default function NestMlContent() {
+export default function NestAiContent() {
   return (
     <BlogShell category="Backend" icon={Server}
       title={<>Python models, <span className="text-accent">NestJS APIs.</span></>}

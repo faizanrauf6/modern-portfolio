@@ -23,8 +23,10 @@ const nextConfig: NextConfig = {
   transpilePackages: ['motion'],
   async redirects() {
     return [
-      { source: '/M_Faizan_Rauf_Senior_Full_Stack_AI_ML_DevOps_CV.pdf', destination: '/M_Faizan_Rauf_SSE_AI_ML_Cloud_Engineer_CV.pdf', permanent: true },
-      { source: '/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf', destination: '/M_Faizan_Rauf_SSE_AI_ML_Cloud_Engineer_CV.pdf', permanent: true },
+      { source: '/M_Faizan_Rauf_SSE_AI_ML_Cloud_Engineer_CV.pdf', destination: '/M_Faizan_Rauf_SSE_AI_Cloud_Engineer_CV.pdf', permanent: true },
+      { source: '/blog/serving-python-ml-models-with-nestjs', destination: '/blog/serving-python-ai-models-with-nestjs', permanent: true },
+      { source: '/M_Faizan_Rauf_Senior_Full_Stack_AI_ML_DevOps_CV.pdf', destination: '/M_Faizan_Rauf_SSE_AI_Cloud_Engineer_CV.pdf', permanent: true },
+      { source: '/Muhammad_Faizan_Rauf_Solution_Architect_CV.pdf', destination: '/M_Faizan_Rauf_SSE_AI_Cloud_Engineer_CV.pdf', permanent: true },
       { source: '/blog/rag', destination: '/blog/how-rag-works', permanent: true },
       { source: '/blog/jwt', destination: '/blog/how-claude-skills-and-harnesses-work', permanent: true },
       { source: '/blog/how-jwt-works', destination: '/blog/how-claude-skills-and-harnesses-work', permanent: true },

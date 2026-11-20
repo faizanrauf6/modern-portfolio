@@ -22,7 +22,7 @@ export default function McpContent() {
       more={[
         { href: '/blog/building-reliable-ai-automation', title: 'Reliable AI Automation', icon: Workflow },
         { href: '/blog/how-rag-works', title: 'How RAG Works', icon: FileSearch },
-        { href: '/blog/serving-python-ml-models-with-nestjs', title: 'Serving ML Models', icon: Server },
+        { href: '/blog/serving-python-ai-models-with-nestjs', title: 'Serving AI Models', icon: Server },
       ]}>
       <P>An assistant can describe an invoice from text you paste into a chat. Looking up its current status in your billing system needs a different capability: a program that can query that system. Tool calling connects the model’s interpretation of a request to an operation your application knows how to perform.</P>
       <P>The Model Context Protocol (MCP) standardizes that connection. It gives compatible applications and servers a shared way to discover tools and exchange calls. It does not make a tool trustworthy or decide whether an invoice belongs to the current user.</P>

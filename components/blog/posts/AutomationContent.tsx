@@ -22,7 +22,7 @@ export default function AutomationContent() {
       more={[
         { href: '/blog/how-mcp-tool-calling-works', title: 'MCP Tool Calling', icon: Plug },
         { href: '/blog/how-cicd-works', title: 'How CI/CD Works', icon: GitBranch },
-        { href: '/blog/serving-python-ml-models-with-nestjs', title: 'Serving ML Models', icon: Server },
+        { href: '/blog/serving-python-ai-models-with-nestjs', title: 'Serving AI Models', icon: Server },
       ]}>
       <P>A support message arrives. An LLM classifies it, drafts a reply, and an API sends the reply. The demo takes three boxes on a whiteboard. The production problem appears when the webhook arrives twice, the model takes too long, or the worker loses its connection just after the email provider accepts the send.</P>
       <P>Reliability comes from making these situations explicit. The model can help interpret a message, while ordinary application code controls state transitions and external effects. The following design is a practical starting point for a reply-drafting workflow; it is not a claim of exactly-once delivery.</P>

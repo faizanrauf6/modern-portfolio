@@ -22,7 +22,7 @@ export default function SolutionArchitectureContent() {
       more={[
         { href: '/blog/designing-reliable-event-driven-integrations', title: 'Event-Driven Integrations', icon: Workflow },
         { href: '/blog/building-observable-resilient-aws-systems', title: 'Resilient AWS Systems', icon: Cloud },
-        { href: '/blog/serving-python-ml-models-with-nestjs', title: 'Serving ML Models', icon: Network },
+        { href: '/blog/serving-python-ai-models-with-nestjs', title: 'Serving AI Models', icon: Network },
       ]}>
       <P>“Build an integration platform” leaves most architectural decisions open. Who owns an order? How long may fulfillment take? What happens when a partner API is unavailable? A diagram drawn before answering these questions can look convincing while solving the wrong problem.</P>
       <P>Consider a hypothetical personalization platform that accepts marketplace orders, generates production assets, and submits them to fulfillment partners. The examples here are design exercises, rather than descriptions of a particular client system.</P>

@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
-import NestMlContent from '@/components/blog/posts/NestMlContent';
+import NestAiContent from '@/components/blog/posts/NestAiContent';
 import { blogPostingJsonLd, HAS_SITE_URL, SITE_URL } from '@/lib/blog-seo';
 
-const TITLE = 'Serving Python ML Models Behind a NestJS API';
+const TITLE = 'Serving Python AI Models Behind a NestJS API';
 const DESCRIPTION = 'Connect a NestJS API to Python inference using FastAPI, versioned feature contracts, warm models, bounded requests, and runtime validation.';
-const SLUG = 'serving-python-ml-models-with-nestjs';
+const SLUG = 'serving-python-ai-models-with-nestjs';
 const PUBLISHED = '2026-10-14';
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  keywords: ['NestJS', 'Python machine learning', 'FastAPI', 'ML inference', 'model serving'],
+  keywords: ['NestJS', 'Python AI', 'FastAPI', 'AI inference', 'model serving'],
   alternates: HAS_SITE_URL ? { canonical: `${SITE_URL}/blog/${SLUG}` } : undefined,
   openGraph: {
     type: 'article',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function NestMlPage() {
+export default function NestAiPage() {
   return (
     <>
       <script
@@ -37,7 +37,7 @@ export default function NestMlPage() {
           })),
         }}
       />
-      <NestMlContent />
+      <NestAiContent />
     </>
   );
 }

@@ -1,6 +1,6 @@
-# Muhammad Faizan Rauf – Senior Software and AI/ML Engineer Portfolio
+# Muhammad Faizan Rauf – Senior Software and AI Engineer Portfolio
 
-Professional portfolio for a **Senior Software and AI/ML Engineer | Solution Architect | Cloud Systems**, with **7+ years of experience** covering distributed systems, enterprise RAG, multi-agent automation, and AWS delivery across FinTech, healthcare, e-commerce, and IoT.
+Professional portfolio for a **Senior Software and AI Engineer | Solution Architect | Cloud Systems**, with **7+ years of experience** covering distributed systems, enterprise RAG, multi-agent automation, and AWS delivery across FinTech, healthcare, e-commerce, and IoT.
 
 Minimal, responsive portfolio built with **Next.js 15**, **Tailwind CSS 4**, and **Motion**.
 
@@ -21,7 +21,7 @@ Profile content is managed through **JSON**, with an optional **OpenAI-powered t
 - **Theme Customization** – Five color palettes, three font styles, and theme-aware profile JSON.
 - **JSON-Based Profile** – Update skills, experience, projects, metrics, and recommendations in one file.
 - **GitHub Activity** – Selected repositories and a contribution calendar with a snapshot fallback.
-- **Technical Writing & Playground** – Thirteen articles for solution architects covering cloud reliability, AI/ML, agents, automation, and backend engineering, plus interactive demos.
+- **Technical Writing & Playground** – Thirteen articles for solution architects covering cloud reliability, AI, agents, automation, and backend engineering, plus interactive demos.
 - **Optional AI Terminal** – OpenAI-powered profile answers, with built-in commands available without an API key.
 
 ## 🚀 Quick Start
@@ -74,7 +74,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 Edit `data/portfolio.json` to update the profile, skills, experience, projects, metrics, recommendations, and default theme. Blog content lives in `app/blog/` and `components/blog/posts/`; the downloadable résumé lives in `public/`.
 
-The current résumé is `public/M_Faizan_Rauf_SSE_AI_ML_Cloud_Engineer_CV.pdf`. Both previous résumé URLs redirect to this updated document.
+The current résumé is `public/M_Faizan_Rauf_SSE_AI_Cloud_Engineer_CV.pdf`. Previous résumé URLs redirect to this updated document.
 
 ## ☁️ Deploy to Vercel
 

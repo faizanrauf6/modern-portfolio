@@ -15,12 +15,12 @@ const STEPS = [
 
 export default function PhishingContent() {
   return (
-    <BlogShell category="Machine Learning" icon={ShieldCheck}
+    <BlogShell category="AI" icon={ShieldCheck}
       title={<>A phishing detector, <span className="text-accent">beyond accuracy.</span></>}
       subtitle="Build an evaluation you can explain: realistic splits, precision and recall, leakage checks, and a threshold matched to the cost of mistakes."
       readTime="8 min read" author="Muhammad Faizan Rauf"
       more={[
-        { href: '/blog/serving-python-ml-models-with-nestjs', title: 'Serving ML Models', icon: Server },
+        { href: '/blog/serving-python-ai-models-with-nestjs', title: 'Serving AI Models', icon: Server },
         { href: '/blog/building-reliable-ai-automation', title: 'Reliable Automation', icon: Workflow },
         { href: '/blog/how-rag-works', title: 'How RAG Works', icon: FileSearch },
       ]}>

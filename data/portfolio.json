@@ -3,7 +3,7 @@
     "name": "Muhammad Faizan Rauf",
     "displayName": "Faizan",
     "lastName": "Rauf",
-    "title": "Senior Software and AI/ML Engineer | Solution Architect | Cloud Systems",
+    "title": "Senior Software and AI Engineer | Solution Architect | Cloud Systems",
     "tagline": "Building distributed systems, AI-powered automation, and cloud infrastructure",
     "coreStack": [
       "Next.js",
@@ -40,9 +40,9 @@
     "github": "https://github.com/faizanrauf6",
     "linkedin": "https://www.linkedin.com/in/m-faizan-rauf",
     "npm": "",
-    "resumeUrl": "/M_Faizan_Rauf_SSE_AI_ML_Cloud_Engineer_CV.pdf",
+    "resumeUrl": "/M_Faizan_Rauf_SSE_AI_Cloud_Engineer_CV.pdf",
     "location": "Lahore, Pakistan",
-    "summary": "Senior Software and AI/ML Engineer with 7+ years of experience designing distributed systems, AI-powered automation, and cloud infrastructure across FinTech, healthcare, e-commerce, and IoT. Translates business requirements into technical designs as a solution architect, covering API-first design, event-driven microservices, and multi-tenant integrations. Builds AI workflows with the Anthropic API, enterprise RAG, Model Context Protocol (MCP), and multi-agent orchestration. Delivered production systems including marketplace integrations across 5+ partner APIs, read-only FHIR access to Epic and Cerner, and real-time cloud-to-device HVAC communication. Builds backends with Next.js, NestJS, and Python, deploys on AWS with Docker and CI/CD, and mentors engineers through code reviews and architecture guidance.",
+    "summary": "Senior Software and AI Engineer with 7+ years of experience designing distributed systems, AI-powered automation, and cloud infrastructure across FinTech, healthcare, e-commerce, and IoT. Translates business requirements into technical designs as a solution architect, covering API-first design, event-driven microservices, and multi-tenant integrations. Builds AI workflows with the Anthropic API, enterprise RAG, Model Context Protocol (MCP), and multi-agent orchestration. Delivered production systems including marketplace integrations across 5+ partner APIs, read-only FHIR access to Epic and Cerner, and real-time cloud-to-device HVAC communication. Builds backends with Next.js, NestJS, and Python, deploys on AWS with Docker and CI/CD, and mentors engineers through code reviews and architecture guidance.",
     "yearsOfExp": "7+",
     "stats": [
       {
@@ -100,7 +100,7 @@
     ],
     "focus": [
       "Solution Architect",
-      "AI/ML",
+      "AI",
       "Cloud Systems"
     ],
     "industries": "FinTech, healthcare, e-commerce, and IoT"
@@ -158,7 +158,7 @@
       ]
     },
     {
-      "category": "AI/ML & Data",
+      "category": "AI & Data",
       "items": [
         "Generative AI",
         "Large Language Models (LLMs)",
@@ -169,7 +169,7 @@
         "Multi-Agent Systems",
         "Context Window Optimization",
         "Vector Databases",
-        "Machine Learning",
+        "AI",
         "Scikit-Learn",
         "NumPy",
         "Pandas",
@@ -217,12 +217,12 @@
   "experience": [
     {
       "company": "PureLogics",
-      "role": "Senior Software and AI/ML Engineer",
+      "role": "Senior Software and AI Engineer",
       "period": "Jan 2023 – Present",
       "location": "Lahore, Pakistan",
       "description": [
         "Design event-driven microservices as a solution architect with Next.js, NestJS, and TypeScript, with clear service boundaries and data ownership.",
-        "Build AI orchestration workflows using the Anthropic API, RAG pipelines, and MCP-connected agents for cross-platform automation, backed by Python data-processing and machine learning pipelines (NumPy, Pandas).",
+        "Build AI orchestration workflows using the Anthropic API, RAG pipelines, and MCP-connected agents for cross-platform automation, backed by Python data-processing and AI pipelines (NumPy, Pandas).",
         "Connect cloud applications to commercial HVAC equipment using Socket.IO and Modbus for real-time device communication.",
         "Configure AWS and Docker environments, troubleshoot releases, and optimize application performance; mentor engineers through code reviews, technical guidance, and architecture discussions."
       ]
@@ -234,7 +234,7 @@
       "location": "Lahore, Pakistan",
       "description": [
         "Led architecture and development of the consumer web platform, admin console, and scalable MongoDB-backed APIs in collaboration with product and design teams.",
-        "Built data-preparation workflows and API integrations supporting AI/ML features and operational automation.",
+        "Built data-preparation workflows and API integrations supporting AI features and operational automation.",
         "Optimized Docker environments and AWS deployment pipelines with infrastructure teams to enable continuous releases for web and API services."
       ]
     },
@@ -314,21 +314,21 @@
     },
     {
       "title": "WebShield AI",
-      "category": "ML-Based Phishing Detection",
+      "category": "AI-Based Phishing Detection",
       "impact": "72.87% offline F1",
       "tags": [
         "Next.js",
         "NestJS",
         "Python",
-        "Machine Learning",
+        "AI",
         "PostgreSQL",
         "Redis",
         "GitHub Actions"
       ],
-      "description": "Built a Next.js/NestJS application with a Python ML engine and explainable website-risk analysis. Offline temporal evaluation on 36,910 URLs reported 96.84% precision, 72.87% F1, and 58.41% recall.",
-      "longDescription": "Built a Next.js/NestJS application with a Python ML engine and explainable website-risk analysis. Offline temporal evaluation on 36,910 URLs reported 96.84% precision, 72.87% F1, and 58.41% recall; these figures describe an offline evaluation rather than production accuracy. Implemented GitHub Actions CI covering tests, builds, PostgreSQL/Redis integration, and Docker isolation checks.",
+      "description": "Built a Next.js/NestJS application with a Python AI engine and explainable website-risk analysis. Offline temporal evaluation on 36,910 URLs reported 96.84% precision, 72.87% F1, and 58.41% recall.",
+      "longDescription": "Built a Next.js/NestJS application with a Python AI engine and explainable website-risk analysis. Offline temporal evaluation on 36,910 URLs reported 96.84% precision, 72.87% F1, and 58.41% recall; these figures describe an offline evaluation rather than production accuracy. Implemented GitHub Actions CI covering tests, builds, PostgreSQL/Redis integration, and Docker isolation checks.",
       "features": [
-        "Next.js/NestJS application with a Python ML engine and explainable website-risk analysis.",
+        "Next.js/NestJS application with a Python AI engine and explainable website-risk analysis.",
         "Offline temporal evaluation: 36,910 URLs, 96.84% precision, 72.87% F1, and 58.41% recall.",
         "GitHub Actions CI for tests, builds, PostgreSQL/Redis integration, and Docker isolation checks."
       ],
@@ -391,11 +391,11 @@
         "Docker"
       ],
       "description": "Architected the consumer web platform, admin panel, and scalable MongoDB-backed APIs, streamlining data flows across product layers.",
-      "longDescription": "Architected the consumer web platform, administrative console, and scalable MongoDB-backed APIs, coordinating data flows across product layers. Automated data preparation and API integrations supporting AI/ML workflows. Optimized Docker environments and AWS deployment pipelines for continuous web and API releases.",
+      "longDescription": "Architected the consumer web platform, administrative console, and scalable MongoDB-backed APIs, coordinating data flows across product layers. Automated data preparation and API integrations supporting AI workflows. Optimized Docker environments and AWS deployment pipelines for continuous web and API releases.",
       "features": [
         "Consumer web platform and administrative console architecture.",
         "Scalable MongoDB-backed APIs and coordinated data flows across product layers.",
-        "Automated data preparation and API integration for AI/ML workflows.",
+        "Automated data preparation and API integration for AI workflows.",
         "Optimized Docker environments and AWS deployment pipelines for continuous releases."
       ],
       "link": "https://mahircompany.com/",
@@ -529,7 +529,7 @@
       },
       {
         "name": "webshield-ai-fraud-detection",
-        "description": "Explainable website risk analysis with Next.js, NestJS, PostgreSQL, Redis, and Python machine learning.",
+        "description": "Explainable website risk analysis with Next.js, NestJS, PostgreSQL, Redis, and Python AI.",
         "url": "https://github.com/faizanrauf6/webshield-ai-fraud-detection",
         "language": "TypeScript",
         "stars": 0,

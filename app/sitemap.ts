@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog/how-mcp-tool-calling-works',
     '/blog/building-reliable-ai-automation',
     '/blog/evaluating-phishing-detection-models',
-    '/blog/serving-python-ml-models-with-nestjs',
+    '/blog/serving-python-ai-models-with-nestjs',
     '/blog/how-rag-works',
     '/blog/how-claude-skills-and-harnesses-work',
     '/blog/how-sessions-work',

@@ -18,7 +18,7 @@ export default function SkillsBentoPage() {
   const databaseSkills = getSkills('Databases');
   const architectureSkills = getSkills('Solution Architect');
   const backendSkills = [...getSkills('Backend & APIs'), ...getSkills('Integrations & Protocols')];
-  const aiMlSkills = getSkills('AI/ML & Data');
+  const aiSkills = getSkills('AI & Data');
   const toolsSkills = getSkills('Cloud & DevOps');
 
   return (
@@ -163,7 +163,7 @@ export default function SkillsBentoPage() {
             </div>
           </motion.div>
 
-          {/* 4. AI/ML & Data (Spans 1 col) */}
+          {/* 4. AI & Data (Spans 1 col) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -177,11 +177,11 @@ export default function SkillsBentoPage() {
                 <div className="p-2 bg-white rounded-xl shadow-sm border border-emerald-100">
                   <Cpu className="w-4 h-4 text-emerald-600" />
                 </div>
-                <h3 className="text-lg font-bold text-emerald-950">AI/ML & Data</h3>
+                <h3 className="text-lg font-bold text-emerald-950">AI & Data</h3>
               </div>
 
               <div className="flex-1 flex flex-col justify-center gap-3">
-                {aiMlSkills.map((skill, idx) => (
+                {aiSkills.map((skill, idx) => (
                   <motion.div
                     key={skill}
                     initial={{ x: -10, opacity: 0 }}
