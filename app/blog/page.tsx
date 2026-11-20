@@ -276,7 +276,7 @@ export default function BlogIndexPage() {
         {/* Search + category filters */}
         <div className="sticky top-16 z-20 -mx-6 px-6 lg:-mx-24 lg:px-24 py-3 mb-10 bg-zinc-50/80 backdrop-blur-md border-y border-zinc-200/60">
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center gap-3">
-            <div className="relative flex-1 min-w-0">
+            <div className="relative min-w-0 md:w-64 md:shrink-0">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 pointer-events-none" />
               <input
                 type="text"
@@ -297,7 +297,7 @@ export default function BlogIndexPage() {
               )}
             </div>
 
-            <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar shrink-0">
+            <div className="flex min-w-0 items-center gap-1.5 overflow-x-auto no-scrollbar md:flex-1">
               {['All', ...CATEGORIES].map((cat) => {
                 const count = cat === 'All' ? POSTS.length : POSTS.filter((p) => p.category === cat).length;
                 const isActive = category === cat;
